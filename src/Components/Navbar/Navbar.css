@@ -12,6 +12,7 @@ nav{
 header {
     position: fixed;
     width: 100%;
+    z-index: 2;
   }
 
 .parrafo{
@@ -104,7 +105,7 @@ header {
 
 .iconos{
     display: flex;
-    gap: 1rem;
+    gap: 3rem;
 }
 .iconos img{
     width: 20px;
@@ -178,10 +179,10 @@ header {
     margin-top: 44%;
    }
     .modal-nav{
-       right: 0%;
-        width: 100%;
-        height: 90%;
-        margin-top: 4%;
+       left: 50%;
+        width: 50%;
+        height: 100%;
+      
 }
     .iconos{
         display: none;
@@ -275,9 +276,11 @@ header {
 
 @media (max-width: 700px) {
     .modal-nav{
-        height: 100%;
-        margin-top: 0%;
-}
+        left: 100%;
+         width: 100%;
+         height: 100%;
+       
+ }
 
     nav{
         padding: 0px 0%;
