@@ -40,10 +40,11 @@ html {
 
 .slider-controler {
   position: relative;
-  bottom: 2rem;
+  bottom: 1rem;
   display: flex;
   align-items: center;
   justify-content: center;
+
 }
 
 .slider-controler .swiper-button-next {
@@ -60,6 +61,7 @@ html {
   left: 42%;
   transform: translateX(-42%);
   filter: drop-shadow(0px 8px 24px rgba(18, 28, 53, 0.1));
+  z-index: 20;
 }
 
 .slider-controler .slider-arrow ion-icon {
@@ -81,7 +83,7 @@ html {
 }
 
 .swiper_container {
-  height: 38rem;
+  height: 55vh;
   width: 100%;
 }
 .swiper-slide {
@@ -93,12 +95,12 @@ html {
   align-content: center!important;
 }
 .swiper-slide img {
-  width: 28rem !important;
-  height: 36rem !important;
+  width: 26rem !important;
+  height: 28rem !important;
 }
 .container {
-  max-width: 100%;
-  padding: 1rem 1rem 40px 0px;
+  max-width: 51%;
+  padding: 0rem 1rem 40px 0px;
   margin: 0 auto;
 }
 @media (max-width: 990px) {
@@ -128,28 +130,35 @@ html {
     transform: translateX(-20%) !important;
   }
 }
-@media (max-width: 500px) {
+
+@media (max-width: 900px) {
   .swiper_container {
-    height: 47rem;
+    height: 30rem;
   }
   .swiper-slide {
-    width: 28rem !important;
-    height: 36rem !important;
+    width: 25rem !important;
+    height: 26rem !important;
   }
   .swiper-slide img {
     width: 20rem !important;
-    height: 20rem !important;
+    height: 23rem !important;
+  }
+
+  .slider-controler .slider-arrow {
+   display: none;
   }
   .container {
-    max-width: 80%;
+    max-width: 70%;
     padding: 4rem 1rem;
     margin: 0 auto;
   }
   
+  
 }
-@media (max-width: 900px) {
+
+@media (max-width: 500px) {
   .swiper_container {
-    height: 35rem;
+    height: 25rem;
   }
   .swiper-slide {
     width: 25rem !important;
@@ -171,4 +180,3 @@ html {
   
   
 }
-
