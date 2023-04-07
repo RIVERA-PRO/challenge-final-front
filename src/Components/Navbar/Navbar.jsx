@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import './Navbar.css'
 import { Link as Anchor, } from "react-router-dom";
 import Logo from '../../img/logo2.png'
+import Logo2 from '../../img/logoverde.png'
 import Favourite from '../../img/favorito.png'
 import Cart from '../../img/carrito.png'
 import Profile from '../../img/user.png'
@@ -9,6 +10,8 @@ import Register from '../Register/Register';
 
 
 export default function Navbar() {
+
+
     let [scrolled, setScrolled] = useState(false);
     let [modal, setModal] = useState(false);  //Se define Modal para 'favoritos'
     let [modalCart, setModalCart] = useState(false); //Se define Modal para 'carrito'
@@ -46,19 +49,26 @@ export default function Navbar() {
     // --------------------------------------------- //
 
     return (
+
         <header>
-            <nav className={scrolled ? "navbar scrolled" : "navbar"}>
+
+            <nav className={scrolled ? "navbar scrolled " : "navbar"}>
                 <div className='logo'>
                     <img src={Logo} alt="logo" />
                 </div>
+                <div className='logo2'>
+                    <img src={Logo2} alt="logo" />
+                </div>
 
-                <div className={`nav_items ${isOpen && "open"}`} >
+                <div className={`nav_items  ${isOpen && "open"}`} >
                     <div className="cerrar-nav" onClick={() => setIsOpen(!isOpen)}>
                         x
                     </div>
                     <div className='logo-nav'>
                         <img src={Logo} alt="logo" />
-
+                    </div>
+                    <div className='logo2-nav'>
+                        <img src={Logo2} alt="logo" />
                     </div>
                     <div className='iconos2'>
                         <img src={Favourite} alt="logoFavourite" onClick={handleModal} />
@@ -78,7 +88,6 @@ export default function Navbar() {
                             <Anchor to={`/`}><i class='fa fa-facebook'></i></Anchor>
                             <Anchor to={`/`}><i class='fa fa-instagram'></i></Anchor>
                             <Anchor to={`/`}> <i class='fa fa-linkedin'></i></Anchor>
-                            <Anchor to={`/`}><i class='fa fa-twitter'></i></Anchor>
                             <Anchor to={`/`}> <i class='fa fa-whatsapp'></i></Anchor>
                         </div>
                     </div>
@@ -98,7 +107,7 @@ export default function Navbar() {
                 </div>
 
                 {modal && (
-                    <div className="modal_content">
+                    <div className="modal_content ">
                         <div className="modal-nav">
                             <div className="cerrar-modal" onClick={handleModal}>x</div>
                             <h3>Favourite</h3>
@@ -126,5 +135,6 @@ export default function Navbar() {
             </nav>
 
         </header>
+
     )
 }

@@ -1,0 +1,29 @@
+
+:root{
+    --text-color: #000;
+    --bg-color: #fff
+  }
+  .theme-dark{
+    --text-color: #ffff;
+    --bg-color: #141627!important;
+  }
+  
+  h1,h2,h3,h4,h5,Anchor{
+    color: var(--text-color)
+  }
+ 
+  .cometent-bg-color {
+    background-color: var(--bg-color);
+  }
+  body{
+    background-color: var(--bg-color);
+  }
+  
+  .main-content {
+    width: 100%;
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  

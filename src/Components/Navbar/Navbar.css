@@ -1,3 +1,28 @@
+
+:root .logo2 {
+    --text-color: #fff;
+    --bg-color: #fff;
+    --bgv-color: #000;
+    --anchor-color:#000;
+    display: none;
+  }
+  .theme-dark .logo{
+    --text-color: #fff!important;
+    --bg-color: #141627!important;
+    --bgv-color: #D1F366;
+    --anchor-color:#ffff;
+    display: none;
+    
+}
+.logo2 img{
+    width:80px;
+}
+.theme-dark .logo2 {
+    display: flex!important
+}
+
+
+
 nav{
     background-color: transparent;
     display: flex;
@@ -25,6 +50,8 @@ header {
 }
 
 
+
+
 .nav_items.open{
     transform: translateX(0) !important;
   
@@ -40,7 +67,7 @@ header {
 .nav_toggle span{
     width: 30px;
     height: 4px;
-    background: #000;
+    background: var(--bgv-color);
     margin-bottom: 5px;
     border-radius: 2px;             
     transform-origin: 5px 0px;
@@ -91,17 +118,6 @@ header {
 }
 
 
-.navbar a{
-    color: #fff;
-    font-size: 20px;
-    font-weight: 500;
-  }
-  
-  .navbar.scrolled {
-    background-color: #fff;
-    color: #ffff;
-    transition: 0.6s ease all;
-}
 
 .iconos{
     display: flex;
@@ -123,6 +139,7 @@ header {
 
 
 
+
 /*modal*/
 
 
@@ -131,7 +148,6 @@ header {
     position: fixed;
     top: 0;
     left: 100%;
-    background-color:cornflowerblue;
     display: flex;
     flex-direction: column;
     width: 40%;
@@ -147,16 +163,20 @@ header {
    text-align: right;
    width: 20px;
    font-size: 45px;
+   color: var(--bgv-color);
 }
 
 .cerrar-nav{
     display: none;
+    color: var(--bgv-color);
 }
 .redes-sociales{
     
    
     display: none;
 }
+
+
 
 @media (max-width: 1024px) {
     .cerrar-nav{
@@ -171,9 +191,8 @@ header {
         font-size: 20px;
        }
    .modal_content{
-    background: rgba(0, 0, 0, 0.7);
     width: 100%;
-    min-height: 100%;
+    min-height: 100vh;
    z-index: 2000000;
     position: fixed;
     margin-top: 44%;
@@ -296,6 +315,97 @@ header {
 
 }
 
-@media (max-width: 400px) {
-    
+
+
+
+  
+  h1,h3,h4,h5{
+    color: var(--text-color)!important;
+  }
+  
+  .cometent-bg-color {
+    transition: 0.6s ease all;
+    background-color: var(--bg-color)!important;
+  }
+  
+  
+  .main-content  {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  
+.navbar a{
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+  }
+  
+.navbar.scrolled {
+    background-color: var(--bg-color)!important;
+    color: #ffff;
+    transition: 0.6s ease all;
 }
+
+.modal-nav{
+    background-color: var(--bg-color)!important;
+}
+.logo2-nav{
+    display: none;
+    width: 80px;
+    }
+    
+    .logo-nav{
+        width: 80px;
+        display: none;
+    }
+@media (max-width: 1024px) {
+    .nav_items{
+        background-color: var(--bg-color)!important;
+        
+    }
+    .navbar a{
+        color: var( --text-color);
+      }
+   
+
+    .logo2-nav {
+        display: flex;
+       
+        }
+        .logo2-nav img{
+            width: 80px;
+        }
+        
+        .logo-nav {
+            display: flex;
+            width: 80px;
+        }
+        .logo-nav img{
+            width: 80px;
+        }
+        :root  .logo2-nav {
+            display: none;
+          }
+          .theme-dark .logo2-nav {
+            display: flex;
+        }
+        
+        :root  .logo-nav {
+            display: flex;
+          }
+          .theme-dark .logo-nav {
+            display: none;
+            
+        }
+        .redes-sociales i{
+        color: var(--bgv-color);
+        }
+       
+}
+
+
+
+
