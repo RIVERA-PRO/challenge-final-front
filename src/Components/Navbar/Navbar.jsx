@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from 'react'
 import './Navbar.css'
 import { Link as Anchor, } from "react-router-dom";
-import Logo from '../../img/logo.png'
+import Logo from '../../img/logo2.png'
 import Favourite from '../../img/favorito.png'
 import Cart from '../../img/carrito.png'
 import Profile from '../../img/user.png'
+import Register from '../Register/Register';
+
 
 export default function Navbar() {
     let [scrolled, setScrolled] = useState(false);
@@ -116,6 +118,7 @@ export default function Navbar() {
                         <div className="modal-nav">
                             <div className="cerrar-modal" onClick={handleModalUser}>x</div>
                             <h3>Your Profile</h3>
+                            <Register />
                         </div>
                     </div>
                 )}

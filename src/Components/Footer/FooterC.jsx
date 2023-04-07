@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link as Anchor, } from "react-router-dom";
 import './footer.css'
-import Logo from '../../img/logo.png'
+import Logo from '../../img/logo2.png'
 export default function FooterC() {
     return (
         <div className='contain-footer'>
