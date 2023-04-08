@@ -1,20 +1,39 @@
-import React from 'react'
+import React, { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
 import './Detail.css'
-import detail from '../../img/Carousel5.jpg'
+import Spiral from "../Spiral/Spiral"
+
 export default function Detail() {
-    return (
+    const { id } = useParams();
+    const [producto, setProducto] = useState(null);
 
-        <div className='detail-contain'>
+    useEffect(() => {
+        fetch(`http://localhost:8080/destinos/${id}`)
+            .then((response) => response.json())
+            .then((data) => {
+                setProducto(data.destino);
+            });
+    }, [id]);
 
-            <div className='img-detail'>
-                <img src={detail} alt="" />
+    if (!producto) {
+        return (
+            <div className="espiral-contain">
+                <Spiral />
             </div>
-            <div className='text-detail'>
-                <h3>Titulo</h3>
-                <p> Live a unique experience with the best views in the world Live a unique experience with the best views in the world Live a unique experience with the best views in the world</p>
-                <button className='btn-comprar'>Buy</button>
+        );
+    }
+
+    return (
+        <div className="detail-contain">
+            <div className="img-detail">
+                <img src={producto.cover_photo} alt={producto.title} />
+            </div>
+            <div className="text-detail">
+                <h3>{producto.title}</h3>
+                <p>{producto.description}</p>
+                <p>{producto.price}</p>
+                <button className="btn-comprar">Buy</button>
             </div>
         </div>
-
-    )
+    );
 }

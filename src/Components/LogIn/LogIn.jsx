@@ -1,70 +1,65 @@
-import React from 'react'
-import './LogIn.css'
-import { useRef, useState } from 'react'
-import axios from 'axios'
-import { useDispatch } from "react-redux";
-import alertActions from "../../Store/Alert/actions";
+import React from 'react';
+import './LogIn.css';
+import { useRef, useState } from 'react';
+import axios from 'axios';
+import { useDispatch } from 'react-redux';
+import alertActions from '../../Store/Alert/actions';
 import { useNavigate } from 'react-router';
 import Modal from 'react-modal';
 
 const { open } = alertActions;
 
-
-
 export default function SignIn() {
-
-    const [modalIsOpen, setModalIsOpen] = useState(false);
-    let dispatch = useDispatch();
-    let dataForm = useRef()
-    const navigate = useNavigate()
-
-    function handleModalOpen() {
-        setModalIsOpen(true);
-    }
-    
-    function handleModalClose() {
-        setModalIsOpen(false);
-    }
+    const [reload, setReload] = useState(false); // Estado para actualizar el componente
+    const dispatch = useDispatch();
+    const dataForm = useRef();
+    const navigate = useNavigate();
 
     async function handleSubmit(e) {
-        e.preventDefault()
+        e.preventDefault();
 
-        let formInputs = []
+        let formInputs = [];
 
-        Object.values(dataForm.current.elements).forEach(e => {
+        Object.values(dataForm.current.elements).forEach((e) => {
             if (e.nodeName === 'INPUT' && e.name) {
-                formInputs.push(e)
+                formInputs.push(e);
             }
-        })
-        formInputs.pop()
+        });
+        formInputs.pop();
         let data = {
             [formInputs[0].name]: formInputs[0].value,
             [formInputs[1].name]: formInputs[1].value,
-        }
-        console.log(data)
+        };
+        console.log(data);
 
-        let url = 'http://localhost:8080/users/signin'
+        let url = 'http://localhost:8080/users/signin';
         try {
             let res = await axios.post(url, data);
             localStorage.setItem('token', res.data.token);
-            localStorage.setItem('user', JSON.stringify({
-              name: res.data.user.name,
-              mail: res.data.user.mail,
-              photo: res.data.user.photo,
-            }));
-            setInterval(() => window.location.href = '/')
+            localStorage.setItem(
+                'user',
+                JSON.stringify({
+                    name: res.data.user.name,
+                    mail: res.data.user.mail,
+                    photo: res.data.user.photo,
+                })
+            );
+            setReload(true); // Actualizar el estado para recargar el componente
             let dataAlert = {
-              icon: "success",
-              title: "Log In Successful",
-              type: "toast"
+                icon: 'success',
+                title: 'Log In Successful',
+                type: 'toast',
             };
             dispatch(open(dataAlert));
             dataForm.current.reset();
-            handleModalOpen(); // Mostrar el modal
         } catch (error) {
             console.error(error);
             let errorMessage = '';
-            if (error.response && error.response.data && error.response.data.message) {
+            if (
+                error.response &&
+                error.response.data &&
+                error.response.data.message
+            ) {
                 if (typeof error.response.data.message === 'string') {
                     errorMessage = error.response.data.message;
                 } else {
@@ -85,18 +80,23 @@ export default function SignIn() {
         }
     }
 
+    // Si el estado "reload" es true, recargar la página
+    if (reload) {
+        window.location.reload();
+    }
+
     return (
         <div className='form-register-contain'>
-            <form action="" className='form-register' onSubmit={handleSubmit} ref={dataForm}>
+            <form action='' className='form-register' onSubmit={handleSubmit} ref={dataForm}>
                 <h4>Log In</h4>
-                <label htmlFor="">Email</label>
-                <input type="email" placeholder='Your email' name='mail' id='mail' />
-                <label htmlFor="">Password</label>
-                <input type="password" placeholder='Your password' name='password' id='password' />
+                <label htmlFor=''>Email</label>
+                <input type='email' placeholder='Your email' name='mail' id='mail' />
+                <label htmlFor=''>Password</label>
+                <input type='password' placeholder='Your password' name='password' id='password' />
                 <div className='enviar'>
-                    <input type='submit' ></input>
+                    <input type='submit'></input>
                 </div>
             </form>
         </div>
-    )
+    );
 }

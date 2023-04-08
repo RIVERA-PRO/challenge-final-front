@@ -32,7 +32,7 @@ export default function Navbar() {
 
     const handleModalUserOption = () => {
         setModalUserOption(modalUserOption === 'register' ? 'login' : 'register');
-      }; //Funcion renderiza el modal 'register' o 'login'
+    }; //Funcion renderiza el modal 'register' o 'login'
 
 
     // Cambio de estado en el Navbar cuando se scrollea 
@@ -89,7 +89,6 @@ export default function Navbar() {
                             <Anchor to={`/`} >Home</Anchor>
                             <Anchor to={`/destinos`} >Destinations</Anchor>
                             <Anchor to={`/`} >FAQ's</Anchor>
-                            <Anchor to={`/details`} >Details</Anchor>
                         </div>
 
                         <div class="redes-sociales">
@@ -133,16 +132,16 @@ export default function Navbar() {
                 )}
 
                 {modalUser && (
-                <div className="modal_content">
-                    <div className="modal-nav">
-                    <div className="cerrar-modal" onClick={handleModalUser}>x</div>
-                    <h3>Your Profile</h3>
-                    <UserInfo />
-                    {modalUserOption === 'register' ? <Register /> : <LogIn />}
-                    <p className='loginText'>Already have an account? <Anchor id='login' onClick={handleModalUserOption}>{modalUserOption === 'register' ? 'Log In' : 'Register'}</Anchor></p>
+                    <div className="modal_content">
+                        <div className="modal-nav">
+                            <div className="cerrar-modal" onClick={handleModalUser}>x</div>
+                            <h3>Your Profile</h3>
+                            <UserInfo />
+                            {modalUserOption === 'register' ? <Register /> : <LogIn />}
+                            <p className='loginText'>Already have an account? <Anchor id='login' onClick={handleModalUserOption}>{modalUserOption === 'register' ? 'Log In' : 'Register'}</Anchor></p>
+                        </div>
                     </div>
-                </div>
-                )}  
+                )}
 
             </nav>
 
