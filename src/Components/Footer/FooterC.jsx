@@ -2,16 +2,20 @@ import React from 'react'
 import { Link as Anchor, } from "react-router-dom";
 import './footer.css'
 import Logo from '../../img/logo2.png'
+import Logo2 from '../../img/logoverde.png'
 export default function FooterC() {
     return (
-        <div className='contain-footer'>
+        <div className='contain-footer '>
 
             <div className='world'>To the World</div>
-            <div className='Footer-contain'>
+            <div className='Footer-contain '>
 
-                <div className='Footer-links'>
+                <div className='Footer-links '>
                     <div className='logo'>
                         <img src={Logo} alt="logo" />
+                    </div>
+                    <div className='logo2'>
+                        <img src={Logo2} alt="logo" />
                     </div>
                     <Anchor to={`/`} >Odyssey@gmail.com</Anchor>
                     <Anchor to={`/`} >+54 123456789</Anchor>
