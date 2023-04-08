@@ -26,6 +26,10 @@ export const router = createBrowserRouter([
                 path: "/users/verify/:verify_code",
                 element: <VerifiAcount />,
             },
+            {
+                path: "/signout",
+                element: <IndexLayout />,
+            },
         ],
     },
 ]);

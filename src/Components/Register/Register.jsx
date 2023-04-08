@@ -1,6 +1,5 @@
 import React from 'react'
 import './Register.css'
-import { Link as Anchor } from 'react-router-dom'
 import { useRef } from 'react'
 import axios from 'axios'
 import { useDispatch } from "react-redux";
@@ -10,10 +9,11 @@ import alertActions from "../../Store/Alert/actions";
 const { open } = alertActions;
 
 
-export default function Register({renderLogIn}) {
+export default function Register() {
 
     let dispatch = useDispatch();
     let dataForm = useRef()
+
 
     async function handleSubmit(e) {
         e.preventDefault()
@@ -70,7 +70,6 @@ export default function Register({renderLogIn}) {
     }
 
 
-
     return (
         <div className='form-register-contain'>
             <form action="" className='form-register' onSubmit={handleSubmit} ref={dataForm}>
@@ -87,10 +86,6 @@ export default function Register({renderLogIn}) {
                     <input type='submit'></input>
                 </div>
 
-                <div className='sin-cuenta'>
-                    <p>Already have an account? <Anchor className='login' onClick={renderLogIn}>Log in</Anchor></p>
-                    <p><span>Log in</span></p>
-                </div>
             </form>
         </div>
     )

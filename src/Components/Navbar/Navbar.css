@@ -136,7 +136,6 @@ header {
 
 /*modal*/
 
-
 .modal-nav{
     z-index: 30000;
     position: fixed;
@@ -151,6 +150,7 @@ header {
     height: 100vh;
     gap: 2rem;
     align-items: center;
+    border-left: 3px solid var(--bgv-color);
 }
 .cerrar-modal {
     cursor: pointer;
@@ -158,6 +158,17 @@ header {
    width: 20px;
    font-size: 45px;
    color: var(--bgv-color);
+}
+
+#login{
+    text-decoration: none;
+    font-size: 20px;
+    color: var(--bgv-color);
+}
+
+.loginText{
+    color: var(--bgv-color);
+
 }
 
 .cerrar-nav{

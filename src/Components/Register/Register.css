@@ -27,7 +27,7 @@
 
 .form-register input{
     background-color: var(--input-form);
-    border-radius: 20px;
+    /* border-radius: 20px; */
     padding: 8px;
     border: none;
     margin: 10px 0px;

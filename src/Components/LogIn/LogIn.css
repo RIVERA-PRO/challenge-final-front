@@ -26,7 +26,7 @@
     padding: 8px;
     background-color: #000000;
     color: #ffff;
-    border-radius: 20px;
+    border-radius: 13px;
 }
 .sin-cuenta{
     margin-top: -20px;
@@ -44,7 +44,7 @@
     text-decoration: none;
 }
 
-.sin-cuenta .register:hover{
+.sin-cuenta .login:hover{
     font-size: 15px;
     font-weight: 500;
     cursor: pointer;
