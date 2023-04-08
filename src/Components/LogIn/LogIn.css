@@ -17,9 +17,6 @@
     color: #ffff;
   
 }
-.form-register label{
-    color: #ffff;
-}
 .form-register h4{
     text-align: center;
     font-size: 17px;
@@ -40,14 +37,14 @@
     font-size: 14px;
 }
 
-.sin-cuenta .login{
+.sin-cuenta .register{
     font-size: 15px;
     font-weight: 500;
     cursor: pointer;
     text-decoration: none;
 }
 
-.sin-cuenta .login:hover{
+.sin-cuenta .register:hover{
     font-size: 15px;
     font-weight: 500;
     cursor: pointer;

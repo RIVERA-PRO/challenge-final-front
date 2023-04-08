@@ -1,20 +1,18 @@
 import React from 'react'
-import './Register.css'
+import './LogIn.css'
 import { Link as Anchor } from 'react-router-dom'
 
-export default function Register({renderLogIn}) {
+
+export default function SignIn({ renderRegister }) {
+
     return (
         <div className='form-register-contain'>
 
 
             <form action="" className='form-register'>
-                <h4>Register</h4>
-                <label htmlFor="">Name</label>
-                <input type="text" placeholder='Your name' />
-                <label htmlFor="">Emal</label>
+                <h4>Log In</h4>
+                <label htmlFor="">Email</label>
                 <input type="mail" placeholder='Your email' />
-                <label htmlFor="">Photo</label>
-                <input type="text" placeholder='Your photo' />
                 <label htmlFor="">Password</label>
                 <input type="password" placeholder='Your password' />
                 <div className='enviar'>
@@ -22,7 +20,7 @@ export default function Register({renderLogIn}) {
                 </div>
 
                 <div className='sin-cuenta'>
-                    <p>Already have an account? <Anchor className='login' onClick={renderLogIn}>Log in</Anchor></p>
+                    <p>Don't have an account yet? <Anchor className='register' onClick={renderRegister} >Register</Anchor></p>
                 </div>
             </form>
 

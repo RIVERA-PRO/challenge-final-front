@@ -5,7 +5,8 @@ import Logo from '../../img/logo2.png'
 import Favourite from '../../img/favorito.png'
 import Cart from '../../img/carrito.png'
 import Profile from '../../img/user.png'
-import Register from '../Register/Register';
+import Register from '../Register/Register'
+import LogIn from '../LogIn/LogIn'
 
 
 export default function Navbar() {
@@ -26,6 +27,7 @@ export default function Navbar() {
     const handleModalUser = () => {
         setModalUser(!modalUser);
     }; //Funcion renderiza Modal 'user'
+
 
     // Cambio de estado en el Navbar cuando se scrollea 
     useEffect(() => {
@@ -118,7 +120,8 @@ export default function Navbar() {
                         <div className="modal-nav">
                             <div className="cerrar-modal" onClick={handleModalUser}>x</div>
                             <h3>Your Profile</h3>
-                            <Register />
+                            {/* <Register /> */}
+                            <LogIn />
                         </div>
                     </div>
                 )}
