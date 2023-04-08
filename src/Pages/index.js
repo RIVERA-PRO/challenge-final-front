@@ -3,6 +3,7 @@ import MainLayout from "../Layouts/MainLayout";
 import { createBrowserRouter } from "react-router-dom";
 import Destinations from "./Destinations/Destinations";
 import PageDetail from "./PageDetail/PageDetail";
+import VerifiAcount from "./VerifiAcount/VerifiAcount";
 export const router = createBrowserRouter([
     {
         path: "/",
@@ -20,6 +21,10 @@ export const router = createBrowserRouter([
             {
                 path: "/details",
                 element: <PageDetail />,
+            },
+            {
+                path: "/users/verify/:verify_code",
+                element: <VerifiAcount />,
             },
         ],
     },

@@ -61,6 +61,7 @@ export default function Carousel() {
         </SwiperSlide>
 
 
+
         <div className="slider-controler">
           <div className="swiper-button-prev slider-arrow">
             <ion-icon name="arrow-back-outline"></ion-icon>
