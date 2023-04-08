@@ -1,11 +1,13 @@
 
 :root{
     --text-color: #000;
-    --bg-color: #fff
+    --bg-color: #fff;
+    --darkIcon-color: #000;
   }
   .theme-dark{
     --text-color: #ffff;
     --bg-color: #141627!important;
+    --darkIcon-color: #fff;
   }
   
   h1,h2,h3,h4,h5,Anchor{
@@ -27,3 +29,50 @@
     align-items: center;
   }
   
+ 
+
+.darkmode{
+  width: 20px;
+  height: 20px;
+  padding: 50px;
+  border-radius: 100%;
+  cursor: pointer;
+  z-index: 20;
+}
+
+.darkmode-icon {
+  font-size: 2rem;
+  margin-right: 0.5em;
+  color: var( --darkIcon-color);
+  cursor: pointer;
+}
+
+.darkmode{
+  display: none;
+}
+
+.main-content{
+   display: flex !important;
+   flex-direction: column!important;
+   justify-content: flex-end!important;
+   align-items: center!important;
+   position: fixed!important;
+   background-color: transparent!important;
+   top: 0!important;
+   z-index: 10!important;
+   margin-top: 6.5vh;
+   width: 10px;
+   height: 0vh;
+   border-radius:100% ;
+   left: 20%;
+}
+
+@media (max-width: 1024px){
+  .main-content{
+    margin-top: 6.5vh;
+    width: 10px;
+    height: 0vh;
+    border-radius:100% ;
+    left: 3.5%;
+ }
+}

@@ -1,7 +1,8 @@
 import IndexLayout from "../Layouts/IndexLayout";
 import MainLayout from "../Layouts/MainLayout";
 import { createBrowserRouter } from "react-router-dom";
-
+import Destinations from "./Destinations/Destinations";
+import PageDetail from "./PageDetail/PageDetail";
 export const router = createBrowserRouter([
     {
         path: "/",
@@ -12,8 +13,14 @@ export const router = createBrowserRouter([
         path: "/",
         element: <MainLayout />,
         children: [
-
-
+            {
+                path: "/destinos",
+                element: <Destinations />,
+            },
+            {
+                path: "/details",
+                element: <PageDetail />,
+            },
         ],
     },
 ]);

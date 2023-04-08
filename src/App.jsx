@@ -2,7 +2,11 @@ import './App.css';
 import { router, } from "./Pages/index";
 import { RouterProvider } from "react-router-dom";
 import React, { useState, useEffect } from 'react'
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faMoon, faSun } from '@fortawesome/free-solid-svg-icons'
+import { Provider } from "react-redux";
+import { store } from "./Store/store.js";
+import Alert from "./Components/Alert/Alert";
 
 function App() {
 
@@ -15,16 +19,21 @@ function App() {
   }, [theme])
 
   return (
-    <div className={theme ? "theme-dark" : ""}>
+    <Provider store={store}>
+      <div className={theme ? "theme-dark" : ""}>
 
-      <RouterProvider router={router} />
-      <div className='cometent-bg-color main-content'>
-        <h1>dark mode</h1>
-        <input type="checkbox" onChange={() => setTheme(!theme)} />
+        <RouterProvider router={router} />
+        <div className='cometent-bg-color main-content'>
 
+          <label className='label-style' htmlFor="darkmode">
+            <FontAwesomeIcon icon={theme ? faSun : faMoon} className="darkmode-icon" />
+            <input type="checkbox" className='darkmode checkbox-style' id="darkmode" onChange={() => setTheme(!theme)} />
+          </label>
+
+        </div>
       </div>
-    </div>
-
+      <Alert />
+    </Provider>
   );
 }
 

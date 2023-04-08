@@ -3,12 +3,10 @@ import './Navbar.css'
 import { Link as Anchor, } from "react-router-dom";
 import Logo from '../../img/logo2.png'
 import Logo2 from '../../img/logoverde.png'
-import Favourite from '../../img/favorito.png'
-import Cart from '../../img/carrito.png'
-import Profile from '../../img/user.png'
+
 import Register from '../Register/Register';
-
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faUser, faHeart, faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 export default function Navbar() {
 
 
@@ -70,18 +68,20 @@ export default function Navbar() {
                     <div className='logo2-nav'>
                         <img src={Logo2} alt="logo" />
                     </div>
+
                     <div className='iconos2'>
-                        <img src={Favourite} alt="logoFavourite" onClick={handleModal} />
-                        <img src={Cart} alt="logoCart" onClick={handleModalCart} />
-                        <img src={Profile} alt="logoUser" onClick={handleModalUser} />
+                        <FontAwesomeIcon icon={faHeart} onClick={handleModal} />
+                        <FontAwesomeIcon icon={faShoppingCart} onClick={handleModalCart} />
+                        <FontAwesomeIcon icon={faUser} onClick={handleModalUser} />
                     </div>
 
                     <div>
+
                         <div className='enlaces'>
                             <Anchor to={`/`} >Home</Anchor>
-                            <Anchor to={`/`} >Packages</Anchor>
+                            <Anchor to={`/destinos`} >Destinations</Anchor>
                             <Anchor to={`/`} >FAQ's</Anchor>
-                            {/* <Anchor to={`/`} >Conslt</Anchor> */}
+                            <Anchor to={`/details`} >Details</Anchor>
                         </div>
 
                         <div class="redes-sociales">
@@ -94,10 +94,11 @@ export default function Navbar() {
 
                 </div>
 
-                <div className='iconos'>
-                    <img src={Favourite} alt="logoFavourite" onClick={handleModal} />
-                    <img src={Cart} alt="logoCart" onClick={handleModalCart} />
-                    <img src={Profile} alt="logoUser" onClick={handleModalUser} />
+
+                <div className='icons-nav'>
+                    <FontAwesomeIcon icon={faHeart} onClick={handleModal} />
+                    <FontAwesomeIcon icon={faShoppingCart} onClick={handleModalCart} />
+                    <FontAwesomeIcon icon={faUser} onClick={handleModalUser} />
                 </div>
 
                 <div className={`nav_toggle  ${isOpen && "open"}`} onClick={() => setIsOpen(!isOpen)}>
@@ -134,7 +135,7 @@ export default function Navbar() {
 
             </nav>
 
-        </header>
+        </header >
 
     )
 }

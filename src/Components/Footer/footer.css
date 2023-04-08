@@ -2,13 +2,15 @@
     --text-color: #000;
     --bg-color: #fff;
     --bgv-color: #000;
-    --texto-negro-blanco: #ffff
+    --texto-negro-blanco: #ffffff;
+    --bg-contain-text: #e0e0e0
   }
   .theme-dark{
     --text-color: #fff!important;
     --bg-color: #141627!important;
     --bgv-color: #D1F366;
-    --texto-negro-blanco: #000
+    --texto-negro-blanco: #000;
+    --bg-contain-text: #1C1F37
 }
   
 .contain-footer{
