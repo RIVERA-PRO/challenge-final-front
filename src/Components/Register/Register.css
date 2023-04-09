@@ -34,7 +34,7 @@
     color: #ffff;
 }
 .form-register label{
-    color: #ffff;
+    color: var( --text-color)!important;;
 }
 .form-register h4{
     text-align: center;
@@ -43,8 +43,8 @@
 .enviar input{
     width: 100%;
     padding: 8px;
-    background-color: var( --bgv-color);
-    color: var(--texto-negro-blanco);
+    background-color: var( --bgv-color)!important;
+    color: var(--texto-negro-blanco)!important;;
     border-radius: 20px;
 }
 .sin-cuenta{

@@ -1,28 +1,33 @@
 :root{
     --text-color: #000;
-    --bg-color: #fff;
+    --bg-color: #ffffff;
     --bgv-color: #000;
     --texto-negro-blanco: #ffffff;
-    --bg-contain-text: #e0e0e0
+    --bg-contain-text: #e0e0e0;
+    --gradient1: #D1F366;
+    --gradient2: #fff;
   }
   .theme-dark{
     --text-color: #fff!important;
     --bg-color: #141627!important;
     --bgv-color: #D1F366;
     --texto-negro-blanco: #000;
-    --bg-contain-text: #1C1F37
+    --bg-contain-text: #1C1F37;
+    --gradient1: #141627;
+    --gradient2: #141627;
 }
   
 .contain-footer{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-    align-items: center;
-    place-content: center;
-    flex-direction: column;
-    width: 100%;
-    padding: 50px 0%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  align-items: center;
+  place-content: center;
+  flex-direction: column;
+  width: 100%;
+  padding: 50px 0%;
+  
 }
 
 .Footer-contain{

@@ -17,6 +17,25 @@ function ProfilePage({ handleLogout }) {
     updateUserData();
   }, []);
 
+  useEffect(() => {
+    const formRegisterContain = document.querySelector('.form-register-contain ');
+    if (userData) {
+      formRegisterContain.style.display = 'none';
+    } else {
+      formRegisterContain.style.display = 'flex';
+    }
+  }, [userData]);
+
+  useEffect(() => {
+    const loginText = document.querySelector('.loginText');
+    if (userData) {
+      loginText.style.display = 'none';
+    } else {
+      loginText.style.display = 'block';
+    }
+  }, [userData]);
+
+
   // Actualizar el estado de userData cuando el usuario inicie sesión
   const handleLogin = () => {
     updateUserData();
@@ -29,7 +48,7 @@ function ProfilePage({ handleLogout }) {
           <h1>Welcome, <span>{userData.name}</span>!</h1>
           <img src={userData.photo} alt="User Avatar" />
           <p>Email: {userData.mail}</p>
-          <Logout onClick={handleLogout}/>
+          <Logout onClick={handleLogout} />
         </div>
       ) : (
         <p className='loginText'>Please log in to view your profile</p>

@@ -8,6 +8,10 @@ import LogIn from '../LogIn/LogIn'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser, faHeart, faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 import UserInfo from '../InfoUser/InfoUser'
+
+import Carrito from '../Carrito/Carrito';
+
+
 export default function Navbar() {
 
 
@@ -17,6 +21,7 @@ export default function Navbar() {
     let [modalUser, setModalUser] = useState(false); //Se define Modal para 'user'
     let [isOpen, setIsOpen] = useState(false)  //Se define Modal para 'Navbar'
     let [modalUserOption, setModalUserOption] = useState('login');
+
 
     const handleModal = () => {
         setModal(!modal);
@@ -127,6 +132,8 @@ export default function Navbar() {
                         <div className="modal-nav">
                             <div className="cerrar-modal" onClick={handleModalCart}>x</div>
                             <h3>Cart</h3>
+
+                            <Carrito carrito={[]} eliminarDelCarrito={() => { }} />
                         </div>
                     </div>
                 )}

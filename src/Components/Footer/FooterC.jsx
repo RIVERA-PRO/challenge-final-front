@@ -31,7 +31,7 @@ export default function FooterC() {
                 <div className='Footer-links'>
                     <h4>Links</h4>
                     <Anchor to={`/`} >Home</Anchor>
-                    <Anchor to={`/`} >Packages</Anchor>
+                    <Anchor to={`/destinos`} >Destinations</Anchor>
                     <Anchor to={`/`} >FAQ's</Anchor>
                     <Anchor to={`/`} >Blog</Anchor>
                     <Anchor to={`/`} >Blog</Anchor>
@@ -46,11 +46,11 @@ export default function FooterC() {
                 </div>
                 <div className='Footer-links'>
                     <h4>Devs</h4>
-                    <Anchor to={`/`} >Home</Anchor>
-                    <Anchor to={`/`} >Home</Anchor>
-                    <Anchor to={`/`} >Home</Anchor>
-                    <Anchor to={`/`} >Home</Anchor>
-                    <Anchor to={`/`} >Home</Anchor>
+                    <Anchor to={`https://github.com/Alexis196`} >Alexy Franco</Anchor>
+                    <Anchor to={`https://github.com/Pilar890`} >Pilar Villareal</Anchor>
+                    <Anchor to={`https://github.com/AgusPereyraa`} >Agus Pereyra</Anchor>
+                    <Anchor to={`https://github.com/stefy0075`} >Eliana Guarino</Anchor>
+                    <Anchor to={`https://github.com/RIVERA-PRO`} >Juan Rivera</Anchor>
                 </div>
 
             </div>

@@ -49,6 +49,7 @@ function Destinos() {
                                             <Anchor className='btn-detail' to={`/details/${destino._id}`}>Details</Anchor>
                                             <p className="card-price">$100</p>
                                         </div>
+
                                     </div>
                                 </div>
                             </div>

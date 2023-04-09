@@ -11,7 +11,7 @@
     background-color: var(--bg-color);
     display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(200px, auto));
-	gap: 2rem;
+	gap: 3rem;
 	align-items: center;
 	text-align: center;
     padding: 5% 7%;
@@ -23,18 +23,22 @@
 
 .card-destinos{
     background-color: var(--bg-contain-text);
-    width: 100%;
+    width: 23rem;
     min-height: 20vh;
-    border-radius: 10px;
-    border-radius: 8px;
+    border-radius: 18px;
     box-shadow: 0 2px 2px #1a1e25;
     overflow: hidden;
     text-align: center;
     transition: all 0.25s;
     text-align: left;
 }
+
+.card-destinos:hover {
+    box-shadow: 0px 6px 30px rgba(0, 0, 0, 0.7);
+    transition: all .40s ease;
+}
 .card-text{
-    padding: 10px 10px;
+    padding: 1px 10px;
 }
 .card-text a{
     
