@@ -1,0 +1,83 @@
+.formSection{
+    box-shadow: 1px 2px 2px black;
+    width: 65%;
+    border-radius: 13px;
+    background-color: var(--bg-contain-text);
+}
+
+.formSection form {
+    display: inline-block;
+}
+
+.formFaqs{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.textFaqs {
+    width: 50%;
+    margin-left: 50%;
+}
+
+.textFaqs textarea {
+    height: 100px;
+}
+
+.formSection input{
+    background-color: var(--input-form);
+    margin: 10rem;
+    padding: 8px;
+    border: none;
+    margin: 10px 0px;
+    color: #ffff;
+}
+.formSection label{
+    color: var( --text-color)!important;;
+}
+.formSection h4{
+    text-align: center;
+    font-size: 17px;
+}
+.enviar input{
+    width: 100%;
+    padding: 8px;
+    background-color: var( --bgv-color)!important;
+    color: var(--texto-negro-blanco)!important;;
+    border-radius: 20px;
+}
+.sin-cuenta{
+    margin-top: -20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 14px;
+    
+}
+
+.sin-cuenta .login{
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.sin-cuenta .login:hover{
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    text-decoration: none;
+    color: #000000;
+    transition: all ease-in .3s;
+    color: var( --bgv-color);
+}
+
+.faqsInputs {
+    display: flex;
+    flex-direction: column;
+    justify-content: initial;
+    align-items: start;
+}
