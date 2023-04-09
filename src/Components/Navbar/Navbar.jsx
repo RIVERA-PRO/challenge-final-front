@@ -94,6 +94,7 @@ export default function Navbar() {
                             <Anchor to={`/`} >Home</Anchor>
                             <Anchor to={`/destinos`} >Destinations</Anchor>
                             <Anchor to={`/`} >FAQ's</Anchor>
+                            <Anchor to={`/Blog`} >Blog</Anchor>
                         </div>
 
                         <div class="redes-sociales">
