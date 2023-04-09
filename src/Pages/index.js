@@ -4,6 +4,7 @@ import { createBrowserRouter } from "react-router-dom";
 import Destinations from "./Destinations/Destinations";
 import PageDetail from "./PageDetail/PageDetail";
 import VerifiAcount from "./VerifiAcount/VerifiAcount";
+import Faqs from "./Faqs/Faqs";
 export const router = createBrowserRouter([
     {
         path: "/",
@@ -28,7 +29,11 @@ export const router = createBrowserRouter([
             },
             {
                 path: "/signout",
-                element: <IndexLayout />,
+                element: <IndexLayout />, //Revisar despues je
+            },
+            {
+                path: "/faqs",
+                element: <Faqs />,
             },
         ],
     },
