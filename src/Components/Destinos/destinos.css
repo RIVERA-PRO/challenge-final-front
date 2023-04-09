@@ -4,8 +4,12 @@
     display: flex;
     flex-direction: column;
     padding: 100px 0%;
+    text-align: center;
 }
-
+.contain-destinos h3{
+    padding: 20px 0px;
+    font-size: 30px;
+}
 .destinos-contain{
     min-height: 100vh;
     background-color: var(--bg-color);
@@ -25,12 +29,16 @@
     background-color: var(--bg-contain-text);
     width: 23rem;
     min-height: 20vh;
-    border-radius: 18px;
+    border-radius: 10px;
     box-shadow: 0 2px 2px #1a1e25;
     overflow: hidden;
     text-align: center;
     transition: all 0.25s;
     text-align: left;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
 }
 
 .card-destinos:hover {
@@ -95,6 +103,7 @@
 }
 .inputsearch{
     height: 10vh;
+    padding: 13px 10px;
 }
 .inputsearch input{
     background-color: var( --bg-contain-text);

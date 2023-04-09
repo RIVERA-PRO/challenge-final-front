@@ -32,9 +32,9 @@ export default function FooterC() {
                     <h4>Links</h4>
                     <Anchor to={`/`} >Home</Anchor>
                     <Anchor to={`/destinos`} >Destinations</Anchor>
-                    <Anchor to={`/`} >FAQ's</Anchor>
-                    <Anchor to={`/`} >Blog</Anchor>
-                    <Anchor to={`/`} >Blog</Anchor>
+                    <Anchor to={`/faqs`} >FAQ's</Anchor>
+                    <Anchor to={`/Blog`} >Blog</Anchor>
+                    <Anchor to={`/`} >Packages</Anchor>
                 </div>
                 <div className='Footer-links'>
                     <h4>Tipes</h4>

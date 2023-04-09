@@ -6,15 +6,17 @@
     --bg-contain-text: #e0e0e0;
     --gradient1: #D1F366;
     --gradient2: #fff;
+    --transparent: #00000031;
   }
   .theme-dark{
     --text-color: #fff!important;
     --bg-color: #141627!important;
     --bgv-color: #D1F366;
     --texto-negro-blanco: #000;
-    --bg-contain-text: #1C1F37;
+    --bg-contain-text: #1a1c37;
     --gradient1: #141627;
     --gradient2: #141627;
+    --transparent: #ffffff0a;
 }
   
 .contain-footer{
@@ -27,7 +29,7 @@
   flex-direction: column;
   width: 100%;
   padding: 50px 0%;
-  
+  background-color: var( --bg-contain-text);
 }
 
 .Footer-contain{
@@ -39,6 +41,7 @@
     border-radius:50px ;
     padding: 30px 0%;
     gap: 5rem;
+   
 }
 
 .Footer-links a{

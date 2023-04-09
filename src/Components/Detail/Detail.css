@@ -4,7 +4,7 @@
     align-items: center;
     flex-direction: column;
     width: 100%;
-    height: 100vh;
+    height: 100%;
    
 }
 .contain-detail h3{
@@ -26,8 +26,7 @@
     align-content: center;
     place-content: center;
     height: 70vh;
-    margin-top: -1%;
-    
+    margin-top: -1%;    
 }
 
 

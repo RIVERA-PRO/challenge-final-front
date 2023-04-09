@@ -29,6 +29,7 @@ function Destinos() {
         const filteredDestinos = destinos.filter(destino => destino.title.toLowerCase().includes(searchTerm.toLowerCase()));
         return (
             <div className="contain-destinos">
+                <h3>Explore The destinations</h3>
                 <div className="inputsearch">
                     <input type="text" placeholder="Search...." value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} />
                 </div>
@@ -40,14 +41,10 @@ function Destinos() {
                                     <img src={destino.cover_photo} alt={destino.title} />
                                     <div className="card-text">
                                         <h2>{destino.title}</h2>
-                                        {/* <p> {JSON.stringify(destino.category_id)}</p> */}
-                                        {destino.category_id.name && (
-                                            <p className="card-categori">{destino.category_id.name}</p>
-                                        )}
 
                                         <div className='price-link'>
                                             <Anchor className='btn-detail' to={`/details/${destino._id}`}>Details</Anchor>
-                                            <p className="card-price">$100</p>
+                                            <p className="card-price">${destino.price}</p>
                                         </div>
 
                                     </div>

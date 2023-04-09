@@ -93,8 +93,8 @@ export default function Navbar() {
                         <div className='enlaces'>
                             <Anchor to={`/`} >Home</Anchor>
                             <Anchor to={`/destinos`} >Destinations</Anchor>
-                            <Anchor to={`/`} >FAQ's</Anchor>
-                            <Anchor to={`/Blog`} >Blog</Anchor>
+                            <Anchor to={`/faqs`} >FAQ's</Anchor>
+                            <Anchor to={`/blog`} >Blog</Anchor>
                         </div>
 
                         <div class="redes-sociales">
