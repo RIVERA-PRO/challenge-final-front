@@ -1,0 +1,13 @@
+.spinner-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  .spiral-container{
+    display: flex;
+    align-items: center;
+    color: var(--bgv-color);
+    font-size: 14px;
+  }

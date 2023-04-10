@@ -10,6 +10,9 @@ import 'swiper/css/pagination';
 import Carousel1 from '../../img/Carousel1.jpg';
 import Carousel2 from '../../img/Carousel2.jpg';
 import Carousel3 from '../../img/Carousel3.jpg';
+import Carousel4 from '../../img/Carousel4.jpg';
+import Carousel5 from '../../img/Carousel5.jpg';
+import Carousel6 from '../../img/Carousel6.jpg';
 
 
 export default function Carousel() {
@@ -43,9 +46,20 @@ export default function Carousel() {
         <SwiperSlide>
           <img src={Carousel2} alt="slide_image" />
         </SwiperSlide>
+
+        <SwiperSlide>
+          <img src={Carousel4} alt="slide_image" />
+        </SwiperSlide>
+        <SwiperSlide>
+          <img src={Carousel5} alt="slide_image" />
+        </SwiperSlide>
+        <SwiperSlide>
+          <img src={Carousel6} alt="slide_image" />
+        </SwiperSlide>
         <SwiperSlide>
           <img src={Carousel3} alt="slide_image" />
         </SwiperSlide>
+
 
 
         <div className="slider-controler">
