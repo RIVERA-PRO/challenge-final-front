@@ -2,6 +2,7 @@
     text-align: center;
     background-color: var( --bg-contain-text);
     padding-top: 100px;
+        background: linear-gradient(0deg,var(--gradient1) 0%, var(--gradient1) 100%);
 }
 .card-aventura-contain h3{
     font-size: 30px;
@@ -16,7 +17,7 @@
     text-align: center;
     padding: 10% 10%;
     place-content: center;
-    
+    background: linear-gradient(0deg,var(--gradient2) 0%, var(--gradient1) 100%);
 }
 
 

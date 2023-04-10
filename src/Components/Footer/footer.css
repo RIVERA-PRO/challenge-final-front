@@ -3,11 +3,12 @@
     --bg-color: #ffffff;
     --bgv-color: #000;
     --texto-negro-blanco: #ffffff;
-    --bg-contain-text: #f1f1f1;
-    --gradient1: #D1F366;
-    --gradient2: #fff;
-    --transparent: #00000031;
+    --bg-contain-text: #EEF1FF;
+    --gradient1: #EEF1FF;
+    --gradient2: #AAC4FF;
+    --transparent: #0000001b;
     --cards-color:#ffffff;
+    --botones: #a550f5;
   }
   .theme-dark{
     --text-color: #fff!important;
@@ -17,8 +18,9 @@
     --bg-contain-text: #1a1c37;
     --gradient1: #141627;
     --gradient2: #141627;
-    --transparent: #ffffff0a;
+    --transparent: #ffffff11;
     --cards-color:#262a47;
+    --botones: #D1F366;
 }
   
 .contain-footer{
@@ -31,7 +33,7 @@
   flex-direction: column;
   width: 100%;
   padding: 50px 0%;
-  background-color: var( --bg-contain-text);
+  background-color: var(--gradient2);
 }
 
 .Footer-contain{
@@ -87,7 +89,7 @@
     border-radius: 20px;
     color: var(  --texto-negro-blanco);
     font-size: 17px;
-    background-color: var( --bgv-color);
+    background-color: var( --botones);
     padding: 7px 30px;
 }
 

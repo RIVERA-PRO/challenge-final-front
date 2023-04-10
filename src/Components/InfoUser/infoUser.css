@@ -14,7 +14,7 @@
 }
 
 .userInfo span {
-    color: var(--bgv-color);
+    color: var(--botones);
 }
 
 .userInfo img {

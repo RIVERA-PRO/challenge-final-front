@@ -151,13 +151,13 @@ header {
     gap: 2rem;
     align-items: center;
     border-left: 3px solid var(--bgv-color);
-    /* background: linear-gradient(to  right, var( --gradient1),var( --gradient1), var( --gradient2)) */
+    background: linear-gradient(0deg,var(--gradient1) 0%, var(--gradient2) 100%)!important;
 }
 .cerrar-modal {
     cursor: pointer;
    text-align: right;
    width: 20px;
-   font-size: 45px;
+   font-size: 35px;
    color: var(--bgv-color);
 }
 
@@ -175,6 +175,7 @@ header {
 .cerrar-nav{
     display: none;
     color: var(--bgv-color);
+    margin-left: 70%;
 }
 .redes-sociales{
     
@@ -235,7 +236,7 @@ header {
     .nav_items{
         justify-content:flex-start;
         display: flex;
-        padding-top: 30px;
+        padding-top: 6px;
         align-items: center;
         align-content: center;
     }
@@ -302,6 +303,9 @@ header {
     .logo-nav img{
         width: 80px;
     }
+    .cerrar-modal {
+       margin-left: 80%;
+    }
 }
 
 
@@ -324,7 +328,7 @@ header {
         width: 105%;
     }
 
-
+    
 
 
 }
@@ -361,6 +365,7 @@ header {
     background-color: var(--bg-color)!important;
     color: var(--bgv-color);
     transition: 0.6s ease all;
+    background: linear-gradient(0deg,var(--gradient1) 0%, var(--gradient2) 100%);
 }
 .navbar.scrolled a{
     color: var(--anchor-color);
@@ -381,7 +386,7 @@ header {
     }
 @media (max-width: 1024px) {
     .nav_items{
-        background-color: var(--bg-color)!important;
+        background: linear-gradient(0deg,var(--gradient1) 0%, var(--gradient2) 100%)!important;
         
     }
     .navbar a{

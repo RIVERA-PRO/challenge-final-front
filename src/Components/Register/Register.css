@@ -31,7 +31,7 @@
     padding: 8px;
     border: none;
     margin: 10px 0px;
-    color: #ffff;
+    color: var(--text-color)!important;;
 }
 .form-register label{
     color: var( --text-color)!important;;
@@ -43,7 +43,7 @@
 .enviar input{
     width: 100%;
     padding: 8px;
-    background-color: var( --bgv-color)!important;
+    background-color: var( --botones)!important;
     color: var(--texto-negro-blanco)!important;;
     border-radius: 20px;
 }
@@ -80,4 +80,5 @@
     align-items: center;
     justify-content: center;
     width: 60%;
+    
 }

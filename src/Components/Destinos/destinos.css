@@ -5,6 +5,7 @@
     flex-direction: column;
     padding: 100px 0%;
     text-align: center;
+    background: linear-gradient(0deg,var(--gradient2) 0%, var(--gradient2) 100%);
 }
 .contain-destinos h3{
     padding: 20px 0px;
@@ -19,6 +20,7 @@
 	align-items: center;
 	text-align: center;
     padding: 5% 7%;
+    background: linear-gradient(0deg,var(--gradient1) 0%, var(--gradient2) 100%);
 }
 
 .destinos-contain img{
@@ -73,8 +75,8 @@
 .btn-detail{
     border-radius: 20px;
     font-size: 14px;
-    background-color: var( --bgv-color);
-    color: var(  --texto-negro-blanco)!important;
+    background-color: var( --botones);
+    color: var(--bg-color)!important;
     padding: 2px ;
     text-decoration: none;
     width: 7rem;
@@ -100,6 +102,7 @@
 .inputsearch{
     height: 10vh;
     padding: 13px 10px;
+    
 }
 .inputsearch input{
     background-color: var( --bg-contain-text);

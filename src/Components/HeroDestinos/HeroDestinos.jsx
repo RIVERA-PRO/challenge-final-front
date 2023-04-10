@@ -6,7 +6,7 @@ export default function HeroDestinos() {
             <div className='welcomeDestinos'>
                 <h2 className='HeroTitle'>Travel without limits and make your dreams come true.</h2>
 
-                <button className='HeroButton'>More</button>
+
             </div>
         </div>
     )

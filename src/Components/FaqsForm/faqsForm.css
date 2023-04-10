@@ -10,12 +10,10 @@
     grid-auto-rows: max-content;
     grid-template-columns: repeat(auto-fit, minmax(510px, 3vh));
     gap: 7rem;
-    background-color: var(--bg-color);
     align-items: center;
     align-content: center;
     place-content: center;
     padding: 100px 0%;
-    background-color: var( --bg-contain-text);
 }
 
 .img-form{
@@ -62,18 +60,14 @@
 }
 
 .inputt{
-    border-radius: 20px;
+    border-radius: 10px;
     padding: 10px 10px;
-    background-color: var(--bg-contain-text);
+    background-color: var(--gradient1);
     border: none;
 }
 .form-faqs textarea{
     border-radius: 10px;
     padding: 30px 10px;
-    background-color: var(--bg-contain-text);
+    background-color: var(--gradient1);
     border: none;
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    -ms-border-radius: 10px;
-    -o-border-radius: 10px;
 }

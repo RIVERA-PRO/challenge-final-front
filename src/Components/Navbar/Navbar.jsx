@@ -97,7 +97,7 @@ export default function Navbar() {
                             <Anchor to={`/blog`} >Blog</Anchor>
                         </div>
 
-                        <div class="redes-sociales">
+                        <div className="redes-sociales">
                             <Anchor to={`/`}><i class='fa fa-facebook'></i></Anchor>
                             <Anchor to={`/`}><i class='fa fa-instagram'></i></Anchor>
                             <Anchor to={`/`}> <i class='fa fa-linkedin'></i></Anchor>

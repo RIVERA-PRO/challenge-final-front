@@ -46,9 +46,9 @@ export default function FooterC() {
                 </div>
                 <div className='Footer-links'>
                     <h4>Devs</h4>
-                    <Anchor to={`https://github.com/Alexis196`} >Alexy Franco</Anchor>
-                    <Anchor to={`https://github.com/Pilar890`} >Pilar Villareal</Anchor>
-                    <Anchor to={`https://github.com/AgusPereyraa`} >Agus Pereyra</Anchor>
+                    <Anchor to={`https://github.com/Alexis196`} >Alexis Franco</Anchor>
+                    <Anchor to={`https://github.com/Pilar890`} >Pilar Villarreal</Anchor>
+                    <Anchor to={`https://github.com/AgusPereyraa`} >Agustin Pereyra</Anchor>
                     <Anchor to={`https://github.com/stefy0075`} >Eliana Guarino</Anchor>
                     <Anchor to={`https://github.com/RIVERA-PRO`} >Juan Rivera</Anchor>
                 </div>

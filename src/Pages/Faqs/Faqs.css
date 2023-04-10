@@ -4,6 +4,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center; */
+    background: linear-gradient(0deg,var(--gradient1) 0%, var(--gradient2) 100%);
 }
 
 .FaqsWelcome {
