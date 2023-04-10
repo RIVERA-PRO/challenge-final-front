@@ -97,11 +97,11 @@ export default function Navbar() {
                             <Anchor to={`/blog`} >Blog</Anchor>
                         </div>
 
-                        <div class="redes-sociales">
-                            <Anchor to={`/`}><i class='fa fa-facebook'></i></Anchor>
-                            <Anchor to={`/`}><i class='fa fa-instagram'></i></Anchor>
-                            <Anchor to={`/`}> <i class='fa fa-linkedin'></i></Anchor>
-                            <Anchor to={`/`}> <i class='fa fa-whatsapp'></i></Anchor>
+                        <div className="redes-sociales">
+                            <Anchor to={`/`}><i className='fa fa-facebook'></i></Anchor>
+                            <Anchor to={`/`}><i className='fa fa-instagram'></i></Anchor>
+                            <Anchor to={`/`}> <i className='fa fa-linkedin'></i></Anchor>
+                            <Anchor to={`/`}> <i className='fa fa-whatsapp'></i></Anchor>
                         </div>
                     </div>
 

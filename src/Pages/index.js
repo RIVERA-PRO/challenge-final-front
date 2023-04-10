@@ -6,6 +6,9 @@ import PageDetail from "./PageDetail/PageDetail";
 import VerifiAcount from "./VerifiAcount/VerifiAcount";
 import Faqs from "./Faqs/Faqs";
 import BlogPage from "./BlogPage/BlogPage";
+import SellerForm from "./SellerForm/SellerForm";
+
+
 export const router = createBrowserRouter([
     {
         path: "/",
@@ -39,6 +42,10 @@ export const router = createBrowserRouter([
             {
                 path: "/Blog",
                 element: <BlogPage />,
+            },
+            {
+                path: "/sellers",
+                element: <SellerForm />,
             },
         ],
     },
