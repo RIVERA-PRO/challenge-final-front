@@ -9,7 +9,7 @@ export default function Hero() {
       <div className='welcomeSection'>
         <h2 className='HeroTitle'>Travel without limits and make your dreams come true.</h2>
         <Carousel />
-        <button className='HeroButton'>More</button>
+        <button className='HeroButton' >More</button>
       </div>
     </div>
   )

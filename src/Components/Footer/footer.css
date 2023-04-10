@@ -3,10 +3,11 @@
     --bg-color: #ffffff;
     --bgv-color: #000;
     --texto-negro-blanco: #ffffff;
-    --bg-contain-text: #e0e0e0;
+    --bg-contain-text: #f1f1f1;
     --gradient1: #D1F366;
     --gradient2: #fff;
     --transparent: #00000031;
+    --cards-color:#ffffff;
   }
   .theme-dark{
     --text-color: #fff!important;
@@ -17,6 +18,7 @@
     --gradient1: #141627;
     --gradient2: #141627;
     --transparent: #ffffff0a;
+    --cards-color:#262a47;
 }
   
 .contain-footer{

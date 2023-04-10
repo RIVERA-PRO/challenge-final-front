@@ -4,9 +4,11 @@ import HeroBlog from '../../Components/HeroBlog/HeroBlog'
 export default function BlogPage() {
     return (
         <div>
-            <HeroBlog />
-            <Blog />
+            <div>
+                <HeroBlog />
+                <Blog />
 
+            </div>
         </div>
     )
 }

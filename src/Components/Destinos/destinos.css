@@ -35,10 +35,6 @@
     text-align: center;
     transition: all 0.25s;
     text-align: left;
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    -ms-border-radius: 10px;
-    -o-border-radius: 10px;
 }
 
 .card-destinos:hover {
