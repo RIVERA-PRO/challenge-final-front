@@ -39,8 +39,8 @@ export default function BlogDestinos() {
                 <div className="destinos-contain-home">
                     {slicedDestinos.length > 0 ? (
                         slicedDestinos.map((destino) => (
-                            <div className="home-destinos">
-                                <div key={destino.id}>
+                            <div className="home-destinos" key={destino.id}>
+                                <div >
                                     <img src={destino.cover_photo} alt={destino.title} />
                                     <div className="card-text">
 

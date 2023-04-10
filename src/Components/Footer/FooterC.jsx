@@ -20,12 +20,12 @@ export default function FooterC() {
                     <Anchor to={`/`} >Odyssey@gmail.com</Anchor>
                     <Anchor to={`/`} >+54 123456789</Anchor>
                     <Anchor to={`/`} > New York</Anchor>
-                    <div class="redes-sociales-footer">
-                        <Anchor to={`/`}><i class='fa fa-facebook'></i></Anchor>
-                        <Anchor to={`/`}><i class='fa fa-instagram'></i></Anchor>
-                        <Anchor to={`/`}> <i class='fa fa-linkedin'></i></Anchor>
-                        <Anchor to={`/`}><i class='fa fa-twitter'></i></Anchor>
-                        <Anchor to={`/`}> <i class='fa fa-whatsapp'></i></Anchor>
+                    <div className="redes-sociales-footer">
+                        <Anchor to={`/`}><i className='fa fa-facebook'></i></Anchor>
+                        <Anchor to={`/`}><i className='fa fa-instagram'></i></Anchor>
+                        <Anchor to={`/`}> <i className='fa fa-linkedin'></i></Anchor>
+                        <Anchor to={`/`}><i className='fa fa-twitter'></i></Anchor>
+                        <Anchor to={`/`}> <i className='fa fa-whatsapp'></i></Anchor>
                     </div>
                 </div>
                 <div className='Footer-links'>

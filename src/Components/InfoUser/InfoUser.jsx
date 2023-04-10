@@ -36,6 +36,7 @@ function ProfilePage({ handleLogout }) {
   }, [userData]);
 
 
+
   // Actualizar el estado de userData cuando el usuario inicie sesión
   const handleLogin = () => {
     updateUserData();

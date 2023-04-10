@@ -38,8 +38,8 @@ function Destinos() {
                 <div className="destinos-contain">
                     {filteredDestinos.length > 0 ? (
                         filteredDestinos.map((destino) => (
-                            <div className="card-destinos">
-                                <div key={destino.id}>
+                            <div className="card-destinos" key={destino._id}>
+                                <div >
                                     <img src={destino.cover_photo} alt={destino.title} />
                                     <div className="card-text">
                                         <h2>{destino.title}</h2>

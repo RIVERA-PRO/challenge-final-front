@@ -15,7 +15,7 @@ export default function CartelPromo() {
             <div className='text-cartelPromo'>
                 <h3> Don't miss anyone promotion</h3>
                 <p>You can cancel your purchases* made online or by phone within a maximum period of 10 days from the date you made the purchase</p>
-                <Anchor to={`/destinos`} className='btn-more' >More</Anchor>
+                <Anchor to={`/Blog`} className='btn-more' >More</Anchor>
             </div>
 
         </div>
