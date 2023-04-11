@@ -81,3 +81,24 @@
     justify-content: center;
     width: 60%;
 }
+.google{
+    display: flex;
+    justify-content: center;
+    width: 300px;
+   
+}
+@media (max-width: 500px) {
+    .google {
+        width: 216px;
+    }
+}
+@media (min-width: 500px) and (max-width: 701px) {
+    .google {
+        width: 330px;
+    }
+}
+@media (min-width: 701px) and (max-width: 981px) {
+    .google {
+        width: 216px;
+    }
+}
