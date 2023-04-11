@@ -48,11 +48,10 @@
 
 .enviar input {
     width: 100%;
-    padding: 8px;
+    padding: 13px;
     background-color: var(--botones) !important;
     color: var(--texto-negro-blanco) !important;
-    
-    border-radius: 20px;
+    border-radius: 300rem !important;
 }
 
 .sin-cuenta {
@@ -92,9 +91,11 @@
 .google{
     display: flex;
     justify-content: center;
-    width: 300px;
-   
+    width: 100%;
+    border-radius: 300rem !important;
+  
 }
+
 @media (max-width: 500px) {
     .google {
         width: 216px;
