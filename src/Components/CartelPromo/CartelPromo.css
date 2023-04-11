@@ -7,11 +7,12 @@
     grid-auto-rows: max-content;
     grid-template-columns: repeat(auto-fit, minmax(510px, 3vh));
     gap: .6em;
-    background-color: var(--bg-color);
+    background-color: var(--gradient1);
     align-items: center;
     align-content: center;
     place-content: center;
     padding: 100px 0%;
+   
 }
 
 .cartelPromo-contain img{
@@ -49,7 +50,7 @@
     border-radius: 20px;
     color: var(  --texto-negro-blanco);
     font-size: 17px;
-    background-color: var( --bgv-color);
+   background-color: var( --botones);
     padding: 5px 30px;
     text-decoration: none;
     width: 7rem;

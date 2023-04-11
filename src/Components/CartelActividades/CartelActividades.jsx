@@ -11,7 +11,7 @@ export default function CartelActividades() {
             <div className='text-cartelActividades'>
                 <h3>Tourist activities</h3>
                 <p>Are you planning a trip? At Almundo we bring you the best activities, walks, excursions and tours with promotions so that you can enjoy the main tourist attractions of your next destination to the fullest.</p>
-                <Anchor to={`/destinos`} className='btn-more' >More</Anchor>
+                <Anchor to={`/Blog`} className='btn-more' >More</Anchor>
             </div>
             <div className='img-cartelActividades'>
                 <img src={isla} alt="" />

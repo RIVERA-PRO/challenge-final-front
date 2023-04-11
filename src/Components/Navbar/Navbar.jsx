@@ -3,10 +3,15 @@ import './Navbar.css'
 import { Link as Anchor, } from "react-router-dom";
 import Logo from '../../img/logo2.png'
 import Logo2 from '../../img/logoverde.png'
-
-import Register from '../Register/Register';
+import Register from '../Register/Register'
+import LogIn from '../LogIn/LogIn'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser, faHeart, faShoppingCart } from '@fortawesome/free-solid-svg-icons';
+import UserInfo from '../InfoUser/InfoUser'
+
+import Carrito from '../Carrito/Carrito';
+
+
 export default function Navbar() {
 
 
@@ -15,6 +20,8 @@ export default function Navbar() {
     let [modalCart, setModalCart] = useState(false); //Se define Modal para 'carrito'
     let [modalUser, setModalUser] = useState(false); //Se define Modal para 'user'
     let [isOpen, setIsOpen] = useState(false)  //Se define Modal para 'Navbar'
+    let [modalUserOption, setModalUserOption] = useState('login');
+
 
     const handleModal = () => {
         setModal(!modal);
@@ -28,6 +35,11 @@ export default function Navbar() {
         setModalUser(!modalUser);
     }; //Funcion renderiza Modal 'user'
 
+    const handleModalUserOption = () => {
+        setModalUserOption(modalUserOption === 'register' ? 'login' : 'register');
+    }; //Funcion renderiza el modal 'register' o 'login'
+
+
     // Cambio de estado en el Navbar cuando se scrollea 
     useEffect(() => {
         window.addEventListener("scroll", handleScroll);
@@ -36,6 +48,7 @@ export default function Navbar() {
         };
     }, []);
 
+    // Cambio de color en navbar al hacer scroll
     const handleScroll = () => {
         const offset = window.scrollY;
         if (offset > 0) {
@@ -80,15 +93,15 @@ export default function Navbar() {
                         <div className='enlaces'>
                             <Anchor to={`/`} >Home</Anchor>
                             <Anchor to={`/destinos`} >Destinations</Anchor>
-                            <Anchor to={`/`} >FAQ's</Anchor>
-                            <Anchor to={`/details`} >Details</Anchor>
+                            <Anchor to={`/faqs`} >FAQ's</Anchor>
+                            <Anchor to={`/blog`} >Blog</Anchor>
                         </div>
 
-                        <div class="redes-sociales">
-                            <Anchor to={`/`}><i class='fa fa-facebook'></i></Anchor>
-                            <Anchor to={`/`}><i class='fa fa-instagram'></i></Anchor>
-                            <Anchor to={`/`}> <i class='fa fa-linkedin'></i></Anchor>
-                            <Anchor to={`/`}> <i class='fa fa-whatsapp'></i></Anchor>
+                        <div className="redes-sociales">
+                            <Anchor to={`/`}><i className='fa fa-facebook'></i></Anchor>
+                            <Anchor to={`/`}><i className='fa fa-instagram'></i></Anchor>
+                            <Anchor to={`/`}> <i className='fa fa-linkedin'></i></Anchor>
+                            <Anchor to={`/`}> <i className='fa fa-whatsapp'></i></Anchor>
                         </div>
                     </div>
 
@@ -120,15 +133,20 @@ export default function Navbar() {
                         <div className="modal-nav">
                             <div className="cerrar-modal" onClick={handleModalCart}>x</div>
                             <h3>Cart</h3>
+
+                            <Carrito />
                         </div>
                     </div>
                 )}
+
                 {modalUser && (
                     <div className="modal_content">
                         <div className="modal-nav">
                             <div className="cerrar-modal" onClick={handleModalUser}>x</div>
                             <h3>Your Profile</h3>
-                            <Register />
+                            <UserInfo />
+                            {modalUserOption === 'register' ? <Register /> : <LogIn />}
+                            <p className='loginText'>Already have an account? <Anchor id='login' onClick={handleModalUserOption}>{modalUserOption === 'register' ? 'Log In' : 'Register'}</Anchor></p>
                         </div>
                     </div>
                 )}

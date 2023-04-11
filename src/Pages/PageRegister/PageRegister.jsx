@@ -1,9 +1,12 @@
 import React from 'react'
 import Register from '../../Components/Register/Register'
-export default function PageRegister() {
+
+
+
+export default function PageRegister({renderLogIn}) {
     return (
         <div>
-            <Register />
+            <Register renderLogIn={renderLogIn}/>
 
         </div>
     )

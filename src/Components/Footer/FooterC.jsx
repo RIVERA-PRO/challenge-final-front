@@ -20,21 +20,21 @@ export default function FooterC() {
                     <Anchor to={`/`} >Odyssey@gmail.com</Anchor>
                     <Anchor to={`/`} >+54 123456789</Anchor>
                     <Anchor to={`/`} > New York</Anchor>
-                    <div class="redes-sociales-footer">
-                        <Anchor to={`/`}><i class='fa fa-facebook'></i></Anchor>
-                        <Anchor to={`/`}><i class='fa fa-instagram'></i></Anchor>
-                        <Anchor to={`/`}> <i class='fa fa-linkedin'></i></Anchor>
-                        <Anchor to={`/`}><i class='fa fa-twitter'></i></Anchor>
-                        <Anchor to={`/`}> <i class='fa fa-whatsapp'></i></Anchor>
+                    <div className="redes-sociales-footer">
+                        <Anchor to={`/`}><i className='fa fa-facebook'></i></Anchor>
+                        <Anchor to={`/`}><i className='fa fa-instagram'></i></Anchor>
+                        <Anchor to={`/`}> <i className='fa fa-linkedin'></i></Anchor>
+                        <Anchor to={`/`}><i className='fa fa-twitter'></i></Anchor>
+                        <Anchor to={`/`}> <i className='fa fa-whatsapp'></i></Anchor>
                     </div>
                 </div>
                 <div className='Footer-links'>
                     <h4>Links</h4>
                     <Anchor to={`/`} >Home</Anchor>
+                    <Anchor to={`/destinos`} >Destinations</Anchor>
+                    <Anchor to={`/faqs`} >FAQ's</Anchor>
+                    <Anchor to={`/Blog`} >Blog</Anchor>
                     <Anchor to={`/`} >Packages</Anchor>
-                    <Anchor to={`/`} >FAQ's</Anchor>
-                    <Anchor to={`/`} >Blog</Anchor>
-                    <Anchor to={`/`} >Blog</Anchor>
                 </div>
                 <div className='Footer-links'>
                     <h4>Tipes</h4>
@@ -46,11 +46,11 @@ export default function FooterC() {
                 </div>
                 <div className='Footer-links'>
                     <h4>Devs</h4>
-                    <Anchor to={`/`} >Home</Anchor>
-                    <Anchor to={`/`} >Home</Anchor>
-                    <Anchor to={`/`} >Home</Anchor>
-                    <Anchor to={`/`} >Home</Anchor>
-                    <Anchor to={`/`} >Home</Anchor>
+                    <Anchor to={`https://github.com/Alexis196`} >Alexis Franco</Anchor>
+                    <Anchor to={`https://github.com/Pilar890`} >Pilar Villarreal</Anchor>
+                    <Anchor to={`https://github.com/AgusPereyraa`} >Agustin Pereyra</Anchor>
+                    <Anchor to={`https://github.com/stefy0075`} >Eliana Guarino</Anchor>
+                    <Anchor to={`https://github.com/RIVERA-PRO`} >Juan Rivera</Anchor>
                 </div>
 
             </div>
