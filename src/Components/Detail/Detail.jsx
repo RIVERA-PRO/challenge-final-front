@@ -2,9 +2,6 @@ import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import "./Detail.css";
 import Spiral from "../Spiral/Spiral";
-import Carrito from "../Carrito/Carrito";
-
-
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { EffectCoverflow, Pagination, Navigation } from 'swiper';
 import 'swiper/css';
@@ -12,11 +9,12 @@ import 'swiper/css/effect-coverflow';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faHeart } from '@fortawesome/free-solid-svg-icons';
 export default function Detail() {
     const { id } = useParams();
     const [producto, setProducto] = useState(null);
-    const [carrito, setCarrito] = useState([]);
+
 
     let token = localStorage.getItem('token')
     let headers = { headers: { 'Authorization': `Bearer ${token}` } }
@@ -30,16 +28,8 @@ export default function Detail() {
             });
     }, [id]);
 
-    const handleAgregarAlCarrito = () => {
-        setCarrito([...carrito, producto]);
-    };
 
-    const eliminarDelCarrito = (productoAEliminar) => {
-        const nuevoCarrito = carrito.filter(
-            (producto) => producto.id !== productoAEliminar.id
-        );
-        setCarrito(nuevoCarrito);
-    };
+
 
     if (!producto) {
         return (
@@ -57,12 +47,13 @@ export default function Detail() {
                     <img src={producto.cover_photo} alt={producto.title} />
                 </div>
                 <div className="text-detail">
+                    <div className="favoritos">
+                        <FontAwesomeIcon icon={faHeart} />
+                    </div>
                     <h3>{producto.title}</h3>
                     <p>{producto.description}</p>
                     <p>Price ${producto.price}</p>
-                    <button className="btn-comprar" onClick={handleAgregarAlCarrito}>
-                        Buy
-                    </button>
+                    <button className="btn-comprar"> Add to cart </button>
                 </div>
             </div>
 
@@ -110,7 +101,7 @@ export default function Detail() {
                     </div>
                 </Swiper>
             </div>
-            {/* <Carrito carrito={carrito} eliminarDelCarrito={eliminarDelCarrito} /> */}
+
         </div >
     );
 }

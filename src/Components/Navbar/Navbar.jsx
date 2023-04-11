@@ -134,7 +134,7 @@ export default function Navbar() {
                             <div className="cerrar-modal" onClick={handleModalCart}>x</div>
                             <h3>Cart</h3>
 
-                            <Carrito carrito={[]} eliminarDelCarrito={() => { }} />
+                            <Carrito />
                         </div>
                     </div>
                 )}

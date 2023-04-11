@@ -1,24 +1,150 @@
 import React from "react";
-
-export default function Carrito({ carrito, eliminarDelCarrito }) {
+import './Carrito.css'
+import Carousel1 from '../../img/Carousel1.jpg';
+export default function Carrito() {
 
 
   return (
-    <div>
-      <h3>Carrito</h3>
-      {carrito.length === 0 ? (
-        <p>No hay productos en el carrito</p>
-      ) : (
-        carrito.map((producto) => (
-          <div key={producto.id}>
-            <p>{producto.title}</p>
-            <p>{producto.price}</p>
-            <button onClick={() => eliminarDelCarrito(producto)}>
-              Eliminar
-            </button>
+    <div className="content-carrito">
+      <div className="sub-content-carrito">
+        <div className="card-productos" >
+          <img src={Carousel1} alt="" />
+          <div className="card-text-productos">
+            <div className="eliminar"> x  </div>
+            <div className='price-title'>
+              <h2>Titulo</h2>
+              <div className="price-cantidad">
+                <p className="card-price">$100</p>
+                <p className="card-price">Cantidad</p>
+              </div>
+            </div>
           </div>
-        ))
-      )}
+        </div>
+        <div className="card-productos" >
+          <img src={Carousel1} alt="" />
+          <div className="card-text-productos">
+            <div className="eliminar"> x  </div>
+            <div className='price-title'>
+              <h2>Titulo</h2>
+              <div className="price-cantidad">
+                <p className="card-price">$100</p>
+                <p className="card-price">Cantidad</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="card-productos" >
+          <img src={Carousel1} alt="" />
+          <div className="card-text-productos">
+            <div className="eliminar"> x  </div>
+            <div className='price-title'>
+              <h2>Titulo</h2>
+              <div className="price-cantidad">
+                <p className="card-price">$100</p>
+                <p className="card-price">Cantidad</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="card-productos" >
+          <img src={Carousel1} alt="" />
+          <div className="card-text-productos">
+            <div className="eliminar"> x  </div>
+            <div className='price-title'>
+              <h2>Titulo</h2>
+              <div className="price-cantidad">
+                <p className="card-price">$100</p>
+                <p className="card-price">Cantidad</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="card-productos" >
+          <img src={Carousel1} alt="" />
+          <div className="card-text-productos">
+            <div className="eliminar"> x  </div>
+            <div className='price-title'>
+              <h2>Titulo</h2>
+              <div className="price-cantidad">
+                <p className="card-price">$100</p>
+                <p className="card-price">Cantidad</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="card-productos" >
+          <img src={Carousel1} alt="" />
+          <div className="card-text-productos">
+            <div className="eliminar"> x  </div>
+            <div className='price-title'>
+              <h2>Titulo</h2>
+              <div className="price-cantidad">
+                <p className="card-price">$100</p>
+                <p className="card-price">Cantidad</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="card-productos" >
+          <img src={Carousel1} alt="" />
+          <div className="card-text-productos">
+            <div className="eliminar"> x  </div>
+            <div className='price-title'>
+              <h2>Titulo</h2>
+              <div className="price-cantidad">
+                <p className="card-price">$100</p>
+                <p className="card-price">Cantidad</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="card-productos" >
+          <img src={Carousel1} alt="" />
+          <div className="card-text-productos">
+            <div className="eliminar"> x  </div>
+            <div className='price-title'>
+              <h2>Titulo</h2>
+              <div className="price-cantidad">
+                <p className="card-price">$100</p>
+                <p className="card-price">Cantidad</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="card-productos" >
+          <img src={Carousel1} alt="" />
+          <div className="card-text-productos">
+            <div className="eliminar"> x  </div>
+            <div className='price-title'>
+              <h2>Titulo</h2>
+              <div className="price-cantidad">
+                <p className="card-price">$100</p>
+                <p className="card-price">Cantidad</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="card-productos" >
+          <img src={Carousel1} alt="" />
+          <div className="card-text-productos">
+            <div className="eliminar"> x  </div>
+            <div className='price-title'>
+              <h2>Titulo</h2>
+              <div className="price-cantidad">
+                <p className="card-price">$100</p>
+                <p className="card-price">Cantidad</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div className="vaciar-comprar">
+        <button className="vaciar">Remove</button>
+        <button className="comprar">Buy</button>
+      </div>
     </div>
   );
 }
