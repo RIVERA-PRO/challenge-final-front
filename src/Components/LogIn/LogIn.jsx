@@ -1,11 +1,14 @@
 import React from 'react';
 import './LogIn.css';
-import { useRef, useState } from 'react';
+import { useRef, useState, useEffect } from "react";
 import axios from 'axios';
 import { useDispatch } from 'react-redux';
 import alertActions from '../../Store/Alert/actions';
 import { useNavigate } from 'react-router';
 import Modal from 'react-modal';
+import { gapi } from "gapi-script";
+import { GoogleLogin } from "react-google-login";
+import toast from "react-hot-toast";
 
 const { open } = alertActions;
 
@@ -71,19 +74,90 @@ export default function SignIn() {
             console.log(errorMessage);
 
             let dataAlert = {
-                icon: 'error',
-                title: 'Error',
-                text: errorMessage,
-                type: 'toast',
+              icon: "error",
+              title: "Error, please register and verify your user",
+              text: errorMessage,
+              type: "toast",
             };
             dispatch(open(dataAlert));
         }
     }
+    const clientID =
+      "498726808406-87jruire70f962v3khp1j50g8du2ml5t.apps.googleusercontent.com";
+
+    useEffect(() => {
+      const start = () => {
+        gapi.auth2.init({
+          clientId: clientID,
+        });
+      };
+      gapi.load("client:auth2", start);
+    }, []);
+
+    const onSuccess = async (response) => {
+      let url = "http://localhost:8080/users/signin";
+      let token = localStorage.getItem("token");
+      let headers = { headers: { Authorization: `Bearer ${token} }` } };
+
+      try {
+        const { email, imageUrl, googleId } = response.profileObj;
+
+        const data = {
+          mail: email,
+          password: googleId,
+        };
+        if (email) await axios.post(url, data, headers);
+        let res = await axios.post(url, data, headers);
+        localStorage.setItem(`token`, res.data.token);
+        localStorage.setItem(
+          `user`,
+          JSON.stringify({
+            mail: email,
+            photo: imageUrl,
+            user_id: res.data.user._id,
+          })
+        );
+        setReload(true);
+        let dataAlert = {
+          icon: "success",
+          title: "Log In Successful",
+          type: "toast",
+        };
+        dispatch(open(dataAlert));
+        navigate("/");
+        dataForm.current.reset();
+      } catch (error) {
+       console.error(error);
+            let errorMessage = '';
+            if (error.response && error.response.data && error.response.data.message) {
+                if (typeof error.response.data.message === 'string') {
+                    errorMessage = error.response.data.message;
+                } else {
+                    errorMessage = error.response.data.message.join(' ');
+                }
+            } else {
+                errorMessage = 'Se produjo un error al procesar la solicitud.';
+            }
+            console.log(errorMessage);
+
+            let dataAlert = {
+              icon: "error",
+              title: "Error, please register and verify your user",
+              text: errorMessage,
+              type: "toast",
+            };
+            dispatch(open(dataAlert));
+      }
+    };
+    const onFailure = () => {
+      console.log("Something went wrong");
+    };
 
     // Si el estado "reload" es true, recargar la página
     if (reload) {
         window.location.reload();
     }
+
 
     return (
         <div className='form-register-contain'>
@@ -96,6 +170,15 @@ export default function SignIn() {
                 <div className='enviar'>
                     <input type='submit'></input>
                 </div>
+                <GoogleLogin
+                className="google"
+                image="./google.png"
+                text="Sign in with Google"
+                clientId={clientID}
+                onSuccess={onSuccess}
+                onFailure={onFailure}
+                cookiePolicy={"sigle_host_policy"}
+              />
             </form>
         </div>
     );
