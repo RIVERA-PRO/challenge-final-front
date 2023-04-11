@@ -94,7 +94,7 @@ export default function Register() {
         photo: imageUrl,
         password: googleId,
       };
-      console.log(data);
+      console.log(data.name);
       const url = "http://localhost:8080/users/signup";
       await axios.post(url, data);
       let dataAlert = {
