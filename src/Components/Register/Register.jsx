@@ -37,8 +37,6 @@ export default function Register() {
       [formInputs[2].name]: formInputs[2].value,
       [formInputs[3].name]: formInputs[3].value,
     }
-    const clientID =
-      "498726808406-87jruire70f962v3khp1j50g8du2ml5t.apps.googleusercontent.com";
 
     let url = 'http://localhost:8080/users/signup'
     try {

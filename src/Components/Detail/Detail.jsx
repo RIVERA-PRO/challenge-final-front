@@ -8,12 +8,20 @@ import 'swiper/css';
 import 'swiper/css/effect-coverflow';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHeart } from '@fortawesome/free-solid-svg-icons';
+import { faHeart, faPlane, faShoppingCart } from '@fortawesome/free-solid-svg-icons';
+import alertActions from "../../Store/Alert/actions";
+import { useDispatch } from "react-redux";
+
+const { open } = alertActions;
+
+
 export default function Detail() {
+    let dispatch = useDispatch();
     const { id } = useParams();
     const [producto, setProducto] = useState(null);
+    const [carrito, setCarrito] = useState([]);
+
 
 
     let token = localStorage.getItem('token')
@@ -27,6 +35,26 @@ export default function Detail() {
                 console.log(data.destino)
             });
     }, [id]);
+
+    const handleSubmit = (index, cover_photo, title, stock, price) => {
+        const newPackage = { price, stock, title, cover_photo };
+        setCarrito(carrito.concat(newPackage));
+        localStorage.setItem('carrito', JSON.stringify(carrito.concat(newPackage)));
+        let dataAlert = {
+            icon: "success",
+            title: "Added product",
+            type: "toast"
+        };
+        dispatch(open(dataAlert));
+    };
+
+    useEffect(() => {
+        const cart = localStorage.getItem('carrito');
+        if (cart) {
+            setCarrito(JSON.parse(cart));
+        }
+    }, []);
+
 
 
 
@@ -52,8 +80,8 @@ export default function Detail() {
                     </div>
                     <h3>{producto.title}</h3>
                     <p>{producto.description}</p>
+                    <p>{producto.packages[0].time[0].finish_date}</p>
                     <p>Price ${producto.price}</p>
-                    <button className="btn-comprar"> Add to cart </button>
                 </div>
             </div>
 
@@ -80,15 +108,38 @@ export default function Detail() {
                     modules={[EffectCoverflow, Pagination, Navigation]}
                     className="swiper_container"
                 >
-                    <SwiperSlide>
-                        <img src={producto.cover_photo} alt="slide_image" />
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <img src={producto.pages[0]} alt="slide_image" />
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <img src={producto.pages[1]} alt="slide_image" />
-                    </SwiperSlide>
+                    {producto.packages.map((product, index) => {
+                        return (
+
+                            <SwiperSlide>
+                                <div className="card-packages" >
+                                    <div className="packages-text">
+                                        <FontAwesomeIcon icon={faPlane} className="icono" />
+                                        <div className="entrada-salida">
+                                            <p>Entrance - {product.hotel[0].check_in}</p>
+                                            <p>Exit - {product.hotel[0].check_out}</p>
+                                        </div>
+                                        <div className="desde-hasta">
+                                            <p>From - {product.time?.start_date}</p>
+                                            <p>Until - {product.time?.finish_date}</p>
+                                        </div>
+                                        <p className="stock">Stock: {product.stock}</p>
+                                        <div className="precio-btn">
+                                            <button onClick={() => handleSubmit(index, producto.cover_photo, producto.title, product.stock, product.price)} className="btn-comprar">
+                                                <FontAwesomeIcon icon={faShoppingCart} />
+                                                {`(${carrito.length})`}
+                                            </button>
+
+                                            <p>Price ${product.price}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </SwiperSlide>
+
+                        )
+                    })}
+
+
 
                     <div className="slider-controler">
                         <div className="swiper-button-prev slider-arrow">

@@ -132,7 +132,7 @@ export default function Navbar() {
                     <div className="modal_content">
                         <div className="modal-nav">
                             <div className="cerrar-modal" onClick={handleModalCart}>x</div>
-                            <h3>Cart</h3>
+                            <h3>Your Cart</h3>
 
                             <Carrito />
                         </div>

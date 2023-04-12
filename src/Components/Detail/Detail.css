@@ -71,13 +71,17 @@
 .btn-comprar{
     border-radius: 20px;
     color: var(  --texto-negro-blanco);
-    font-size: 17px;
+    font-size: 13px;
     background-color: var( --botones);
     padding: 5px 30px;
     text-decoration: none;
-    width:16rem;
+    width:8rem;
+    font-size: 15px;
     text-align: center;
+    display: flex;
+    align-items: center;
     border: none;
+    cursor: pointer;
 }
 
 .espiral-contain{
@@ -101,6 +105,74 @@
     font-size: 20px;
     margin-left: 97%;
 }
+
+.card-packages{
+    background-color: var(--bg-contain-text);
+    width: 27rem;
+    min-height: 25vh;
+    border-radius: 10px;
+    box-shadow: 0 2px 2px #1a1e25;
+    overflow: hidden;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    transition: all 0.25s;
+    text-align: left;
+   
+}
+
+.card-packages:hover {
+    box-shadow: 0px 6px 30px rgba(0, 0, 0, 0.7);
+    transition: all .40s ease;
+}
+.packages-text{
+    padding: 20px 10px;
+    display: flex;
+    flex-direction: column;
+   
+    text-align: left;
+}
+.packages-text a{
+    
+    color: var(--bgv-color);
+    text-decoration: none;
+    
+}
+.icono{
+    font-size: 20px;
+    color: var(--botones);
+}
+.precio-btn{
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    font-size: 13px;
+    color: var(--text-color);
+    margin-left: 15%;
+    font-weight: 500;
+}
+
+.desde-hasta{
+    display: flex;
+    gap: 3rem;
+    color: var(--text-color);
+    font-size: 11px;
+    
+}
+.entrada-salida{
+    display: flex;
+    gap: 3rem;
+    color: var(--text-color);
+    font-size: 11px;
+}
+.stock {
+    text-align: center;
+    color: var(--text-color);
+}
+
+
 
 @media (max-width: 1500px){
     .detail-contain{
