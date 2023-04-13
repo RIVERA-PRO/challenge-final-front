@@ -49,10 +49,7 @@
     margin-top: -10%;
 }
 
-.price-title h2{
-    width: 100%;
-   
-}
+
 .card-text-productos{
     width: 100%;
   
@@ -65,9 +62,13 @@
     font-weight: 500;
 }
 
-.price-cantidad{
+.plane-cantidad{
     display: flex;
     gap: 2rem;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    margin-top: -8px;
 }
 
 .vaciar-comprar{
@@ -87,6 +88,7 @@
     width: 100%;
     text-align: center;
     border: none;
+    cursor: pointer;
 }
 
 .comprar{
@@ -99,6 +101,7 @@
     width: 100%;
     text-align: center;
     border: none;
+    cursor: pointer;
 }
 
 .total-price{
@@ -111,4 +114,27 @@
 .no-hay-productos{
     color: var(  --bgv-color);
     font-size: 15px;
+}
+.title-plane{
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.plane{
+    font-size: 14px;
+    margin: 0;
+    
+}
+
+.price-title h2{
+   margin: 0;
+   width: 70%;
+}
+
+.carrito-price{
+    font-size: 14px;
+    margin: 0;
+    font-weight: 500;
+    margin-top: -7px;
 }

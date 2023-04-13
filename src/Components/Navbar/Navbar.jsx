@@ -29,6 +29,7 @@ export default function Navbar() {
 
     const handleModalCart = () => {
         setModalCart(!modalCart);
+
     }; //Funcion renderiza Modal 'Carrito'
 
     const handleModalUser = () => {
@@ -109,7 +110,7 @@ export default function Navbar() {
 
 
                 <div className='icons-nav'>
-                    <FontAwesomeIcon icon={faHeart} onClick={handleModal} />
+                    {/* <FontAwesomeIcon icon={faHeart} onClick={handleModal} /> */}
                     <FontAwesomeIcon icon={faShoppingCart} onClick={handleModalCart} />
                     <FontAwesomeIcon icon={faUser} onClick={handleModalUser} />
                 </div>
@@ -120,14 +121,15 @@ export default function Navbar() {
                     <span></span>
                 </div>
 
-                {modal && (
+                {/* {modal && (
                     <div className="modal_content ">
                         <div className="modal-nav">
                             <div className="cerrar-modal" onClick={handleModal}>x</div>
                             <h3>Favourite</h3>
+                            <Favorito />
                         </div>
                     </div>
-                )}
+                )} */}
                 {modalCart && (
                     <div className="modal_content">
                         <div className="modal-nav">

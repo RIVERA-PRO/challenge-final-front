@@ -2,16 +2,24 @@ import React, { useState, useEffect } from "react";
 import './Carrito.css'
 import alertActions from "../../Store/Alert/actions";
 import { useDispatch } from "react-redux";
+import axios from "axios";
 const { open } = alertActions;
 
 export default function Carrito() {
+  let token = localStorage.getItem("token");
+  let headers = { headers: { Authorization: ` Bearer ${token}` } };
   let dispatch = useDispatch();
   const [cartItems, setCartItems] = useState([]);
+  const [reload, setReload] = useState(false)
 
-  useEffect(() => {
+  const updateCartItems = () => {
     const cartData = JSON.parse(localStorage.getItem("carrito"));
     setCartItems(cartData || []);
+  }
+  useEffect(() => {
+    updateCartItems();
   }, []);
+
 
   const handleDelete = (index) => {
     const updatedCartItems = [...cartItems];
@@ -37,7 +45,13 @@ export default function Carrito() {
     dispatch(open(dataAlert));
   };
 
-  const totalPrice = cartItems.reduce((acc, item) => acc + item.price, 0);
+  const totalPrice = cartItems.reduce((acc, item) => acc + item.price * item.quantity, 0);
+  const handleBuy = () => {
+    // Hacer la petición HTTP al servidor para realizar la compra
+    axios
+      .post("http://localhost:8080/buy", cartItems, headers)
+      .then(res => window.location.href = res.data.response.body.init_point);
+  };
 
   return (
     <div className="content-carrito">
@@ -57,11 +71,16 @@ export default function Carrito() {
                     </div>
 
                     <div className="price-title">
+
                       <h2>{item.title}</h2>
-                      <div className="price-cantidad">
-                        <p className="card-price">${item.price}</p>
-                        <p className="card-price">{item.stock}</p>
+
+
+                      <div className="plane-cantidad">
+
+                        <p className="plane">{item.type}</p>
+                        <p className="card-price">{item.quantity}</p>
                       </div>
+                      <p className="carrito-price">${item.price}</p>
                     </div>
                   </div>
                 </div>
@@ -73,7 +92,7 @@ export default function Carrito() {
             <button className="vaciar" onClick={handleClear}>
               Remove
             </button>
-            <button className="comprar">Buy</button>
+            <button className="comprar" onClick={handleBuy}>Buy</button>
           </div>
 
         </div>
