@@ -9,6 +9,9 @@
     --transparent: #0000001b;
     --cards-color:#ffffff;
     --botones: #a550f5;
+    --packages:#a550f50e;
+    --gradient3: #EEF1FF;
+    --gradient4: #AAC4FF;
   }
   .theme-dark{
     --text-color: #fff!important;
@@ -21,6 +24,9 @@
     --transparent: #ffffff11;
     --cards-color:#262a47;
     --botones: #D1F366;
+    --packages:#d2f36605;
+    --gradient3: #1a1c37;
+    --gradient4: #1a1c37;
 }
   
 .contain-footer{

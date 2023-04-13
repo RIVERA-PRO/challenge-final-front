@@ -161,14 +161,6 @@ header {
    color: var(--bgv-color);
 }
 
-<<<<<<< HEAD
-.modal-nav h3{
-    font-size: 18px;
-    font-weight: 500;
-}
-
-=======
->>>>>>> 63ddc0fdab67624c127144ef82c1e005f2097e67
 #login{
     text-decoration: none;
     font-size: 20px;
