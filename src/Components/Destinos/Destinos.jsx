@@ -86,6 +86,7 @@ function Destinos() {
                                             <Anchor className='btn-detail' to={`/details/${destino._id}`}>Details</Anchor>
                                             <p> {destino.packages[0].time[0].start_date}  {destino.packages[0].time[0].finish_date} </p>
 
+
                                         </div>
 
                                     </div>

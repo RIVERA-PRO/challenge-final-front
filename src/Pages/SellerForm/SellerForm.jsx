@@ -5,6 +5,8 @@ export default function SellerForm() {
     return (
         <div>
             <FormSeller />
-        </div>
+
+
+        </div >
     )
 }

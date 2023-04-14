@@ -84,7 +84,7 @@ export default function Navbar() {
                     </div>
 
                     <div className='iconos2'>
-                        <FontAwesomeIcon icon={faHeart} onClick={handleModal} />
+
                         <FontAwesomeIcon icon={faShoppingCart} onClick={handleModalCart} />
                         <FontAwesomeIcon icon={faUser} onClick={handleModalUser} />
                     </div>

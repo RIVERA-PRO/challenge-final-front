@@ -11,7 +11,7 @@
 .sellerFormulario{
     display: flex;
     flex-direction: column;
-    width: 30%;
+    width: 90%;
     height: 100%;
     background-color: var(--transparent);
     padding: 20px;
@@ -32,9 +32,12 @@
     border: none;
     margin: 10px 0px;
     color: var(--text-color)!important;;
+
 }
 .formSeller button{
-    width: 100%;
+    margin-top: 20px;
+   margin-left: 40%;
+    width: 20rem;
     padding: 8px;
     background-color: var(--botones) !important;
     color: var(--texto-negro-blanco) !important;

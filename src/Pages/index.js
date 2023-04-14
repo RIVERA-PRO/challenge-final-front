@@ -7,7 +7,7 @@ import VerifiAcount from "./VerifiAcount/VerifiAcount";
 import Faqs from "./Faqs/Faqs";
 import BlogPage from "./BlogPage/BlogPage";
 import SellerForm from "./SellerForm/SellerForm";
-
+import DestinosFormPage from "./DestinosFormPage/DestinosFormPage";
 
 export const router = createBrowserRouter([
     {
@@ -46,6 +46,10 @@ export const router = createBrowserRouter([
             {
                 path: "/sellers",
                 element: <SellerForm />,
+            },
+            {
+                path: "/new/destinos",
+                element: <DestinosFormPage />,
             },
         ],
     },

@@ -51,6 +51,7 @@ export default function Carrito() {
     axios
       .post("http://localhost:8080/buy", cartItems, headers)
       .then(res => window.location.href = res.data.response.body.init_point);
+    localStorage.removeItem("carrito");
   };
 
   return (
