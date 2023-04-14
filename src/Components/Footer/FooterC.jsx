@@ -19,7 +19,7 @@ export default function FooterC() {
                     </div>
                     <Anchor to={`/`} >Odyssey@gmail.com</Anchor>
                     <Anchor to={`/`} >+54 123456789</Anchor>
-                    <Anchor to={`/`} > New York</Anchor>
+                    <Anchor to={`/`} > Argentina</Anchor>
                     <div className="redes-sociales-footer">
                         <Anchor to={`/`}><i className='fa fa-facebook'></i></Anchor>
                         <Anchor to={`/`}><i className='fa fa-instagram'></i></Anchor>

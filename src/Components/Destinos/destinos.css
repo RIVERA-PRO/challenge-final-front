@@ -162,6 +162,10 @@ option{
     gap: 1rem;
 }
 
+.country-continent h4{
+    font-size: 17px;
+    font-weight: 400;
+}
 @media (max-width: 500px){
  
     .country-continent{

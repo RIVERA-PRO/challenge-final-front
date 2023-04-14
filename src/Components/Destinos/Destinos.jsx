@@ -43,7 +43,7 @@ function Destinos() {
                 </div>
                 <div className="country-continent">
                     <div className="label">
-                        <label>Country:</label>
+
                         <select value={country} onChange={(e) => setCountry(e.target.value)}>
                             <option value="">All</option>
                             <option value="France">France</option>
@@ -55,12 +55,12 @@ function Destinos() {
                             <option value="China">China </option>
                             <option value="Turkey">Turkey  </option>
                             <option value="Australia">Australia</option>
-                            <option value="Germany">Germany </option>
                             <option value="United States">United States</option>
                         </select>
                     </div>
+                    <h4>Country or Continent</h4>
                     <div className="label">
-                        <label>Continent:</label>
+
                         <select value={continent} onChange={(e) => setContinent(e.target.value)}>
                             <option value="">All</option>
                             <option value="Europe">Europe</option>
@@ -69,7 +69,6 @@ function Destinos() {
                             <option value="Oceania">Oceania</option>
                             <option value="North America">North America</option>
                             <option value="South America">South America</option>
-                            <option value="Asia & Europe">Asia & Europe</option>
                         </select>
                     </div>
                 </div>

@@ -14,6 +14,7 @@
     align-content: center;
     place-content: center;
     padding: 100px 0%;
+    
 }
 
 .img-form{
@@ -70,4 +71,16 @@
     padding: 30px 10px;
     background-color: var(--gradient1);
     border: none;
+    
+}
+
+
+#name{
+    color: var(--text-color)!important;
+}
+#email{
+    color: var(--text-color)!important;
+}
+#question{
+    color: var(--text-color)!important;
 }
