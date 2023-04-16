@@ -23,6 +23,23 @@ export default function Navbar() {
     let [modalUserOption, setModalUserOption] = useState('login');
 
 
+
+    const [userData, setUserData] = useState(null);
+
+    const updateUserData = () => {
+        const user = localStorage.getItem('user');
+        if (user) {
+            setUserData(JSON.parse(user));
+        }
+    };
+
+    // Llamar a la función updateUserData cuando el componente se monte
+    useEffect(() => {
+        updateUserData();
+    }, []);
+
+
+
     const handleModal = () => {
         setModal(!modal);
     }; //Funcion renderiza Modal 'favoritos'
@@ -64,6 +81,8 @@ export default function Navbar() {
 
         <header>
 
+
+
             <nav className={scrolled ? "navbar scrolled " : "navbar"}>
                 <div className='logo'>
                     <img src={Logo} alt="logo" />
@@ -91,12 +110,22 @@ export default function Navbar() {
 
                     <div>
 
-                        <div className='enlaces'>
-                            <Anchor to={`/`} >Home</Anchor>
-                            <Anchor to={`/destinos`} >Destinations</Anchor>
-                            <Anchor to={`/faqs`} >FAQ's</Anchor>
-                            <Anchor to={`/blog`} >Blog</Anchor>
-                        </div>
+                        {userData ? (
+                            <div className='enlaces'>
+                                <Anchor to={`/`} >Home</Anchor>
+                                <Anchor to={`/destinos`} >Destinations</Anchor>
+                                <Anchor to={`/faqs`} >FAQ's</Anchor>
+                                <Anchor to={`/blog`} >Blog</Anchor>
+                                <Anchor to={`/new/destinos`} >Admin</Anchor>
+                            </div>
+                        ) : (
+                            <div className='enlaces'>
+                                <Anchor to={`/`} >Home</Anchor>
+                                <Anchor to={`/faqs`} >FAQ's</Anchor>
+                                <Anchor to={`/blog`} >Blog</Anchor>
+                            </div>
+                        )}
+
 
                         <div className="redes-sociales">
                             <Anchor to={`/`}><i className='fa fa-facebook'></i></Anchor>
