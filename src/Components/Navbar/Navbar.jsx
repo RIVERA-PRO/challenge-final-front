@@ -8,7 +8,7 @@ import LogIn from '../LogIn/LogIn'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser, faHeart, faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 import UserInfo from '../InfoUser/InfoUser'
-
+import axios from 'axios';
 import Carrito from '../Carrito/Carrito';
 
 
@@ -76,6 +76,16 @@ export default function Navbar() {
         }
     };
     // --------------------------------------------- //
+    const [seller, setIsSeller] = useState(false)
+
+    useEffect(() => {
+        axios.get('http://localhost:8080/seller/:id')
+            .then(response => {
+                setIsSeller(response.data)
+                console.log(setIsSeller)
+            })
+    }, []);
+
 
     return (
 

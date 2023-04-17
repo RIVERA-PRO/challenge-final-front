@@ -10,6 +10,21 @@
     overflow-y:scroll;
     padding: 10px 10px;
 }
+.sub-content-carrito::-webkit-scrollbar{
+    width: 7px;
+    height: 7px;
+   
+    cursor: pointer;
+ }
+ 
+ .sub-content-carrito::-webkit-scrollbar-thumb{
+     background-color: var(--botones);
+     width: 10px;
+     border-radius:20px ;
+     cursor: pointer;
+ }
+
+
 
 .producto-carrito{
     display: flex;
@@ -138,3 +153,17 @@
     font-weight: 500;
     margin-top: -7px;
 }
+
+
+html::-webkit-scrollbar{
+    width: 7px;
+    height: 7px;
+    cursor: pointer;
+ }
+ 
+html::-webkit-scrollbar-thumb{
+     background-color: var(--botones);
+     width: 10px;
+     border-radius:20px ;
+     cursor: pointer;
+ }
