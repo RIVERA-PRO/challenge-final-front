@@ -4,15 +4,18 @@ import axios from 'axios'
 import { useDispatch } from "react-redux";
 import alertActions from "../../Store/Alert/actions";
 import './FormDestinos.css'
+import { useParams } from 'react-router-dom';
+
 const { open } = alertActions;
 
 export default function FormDestinos() {
+
     let dispatch = useDispatch();
     let dataForm = useRef()
     const title = useRef()
     const cover_photo = useRef()
     const category_id = useRef()
-    const seller_id = useRef()
+    const { seller_id } = useParams()
     const pages = useRef()
     const pages1 = useRef()
     const pages2 = useRef()
@@ -63,7 +66,8 @@ export default function FormDestinos() {
                 pages.current.value, pages1.current.value, pages2.current.value
             ],
 
-            "seller_id": seller_id.current.value,
+            // "seller_id": seller_id.current.value,
+            "seller_id": seller_id,
             "category_id": category_id.current.value,
             "packages": packages.current.value,
 
@@ -79,13 +83,13 @@ export default function FormDestinos() {
                         }
 
                     ],
-                    "hotel": [
-                        {
-                            "check_in": package1Hotel.current.value,
-                            "check_out": package1Hotel2.current.value,
-                        }
+                    // "hotel": [
+                    //     {
+                    //         "check_in": package1Hotel.current.value,
+                    //         "check_out": package1Hotel2.current.value,
+                    //     }
 
-                    ],
+                    // ],
                 },
                 {
                     "type": package2Type.current.value,
@@ -99,13 +103,13 @@ export default function FormDestinos() {
                         }
 
                     ],
-                    "hotel": [
-                        {
-                            "check_in": package2Hotel.current.value,
-                            "check_out": package2Hotel2.current.value,
-                        }
+                    // "hotel": [
+                    //     {
+                    //         "check_in": package2Hotel.current.value,
+                    //         "check_out": package2Hotel2.current.value,
+                    //     }
 
-                    ],
+                    // ],
                 },
                 {
                     "type": package3Type.current.value,
@@ -119,13 +123,13 @@ export default function FormDestinos() {
                         }
 
                     ],
-                    "hotel": [
-                        {
-                            "check_in": package3Hotel.current.value,
-                            "check_out": package3Hotel2.current.value,
-                        }
+                    // "hotel": [
+                    //     {
+                    //         "check_in": package3Hotel.current.value,
+                    //         "check_out": package3Hotel2.current.value,
+                    //     }
 
-                    ],
+                    // ],
                 },
             ],
 
@@ -200,10 +204,10 @@ export default function FormDestinos() {
                         </div>
                         <div className='inputs'>
                             <div className='al-lado'>
-                                <div>
+                                {/* <div>
                                     <label >seller_id</label>
                                     <input type="text" placeholder='seller_id' ref={seller_id} />
-                                </div>
+                                </div> */}
                                 <div>
                                     <label >category_id</label>
                                     <input type="text" placeholder='category_id' ref={category_id} />
@@ -246,12 +250,12 @@ export default function FormDestinos() {
                                     <input type="date" ref={package1Time} />
                                     <input type="date" ref={package1Time2} />
                                 </div>
-                                <div className='al-lado'>
+                                {/* <div className='al-lado'>
                                     <label className='label-center'>Hotel</label>
                                     <input type="date" ref={package1Hotel} />
                                     <input type="date" ref={package1Hotel2} />
 
-                                </div>
+                                </div> */}
                             </div>
                         </div>
                     </div>
@@ -277,12 +281,12 @@ export default function FormDestinos() {
                                 <input type="date" ref={package2Time} />
                                 <input type="date" ref={package2Time2} />
                             </div>
-                            <div className='al-lado'>
+                            {/* <div className='al-lado'>
                                 <label className='label-center'>Hotel</label>
                                 <input type="date" ref={package2Hotel} />
                                 <input type="date" ref={package2Hotel2} />
 
-                            </div>
+                            </div> */}
                         </div>
                     </div>
                     <div className='packages'>
@@ -307,12 +311,12 @@ export default function FormDestinos() {
                                 <input type="date" ref={package3Time} />
                                 <input type="date" ref={package3Time2} />
                             </div>
-                            <div className='al-lado'>
+                            {/* <div className='al-lado'>
                                 <label className='label-center'>Hotel</label>
                                 <input type="date" ref={package3Hotel} />
                                 <input type="date" ref={package3Hotel2} />
 
-                            </div>
+                            </div> */}
                         </div>
                     </div>
 

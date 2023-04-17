@@ -224,11 +224,11 @@ export default function Detail() {
                                             </div>
                                         </div>
                                         <div className="hotel">
-                                            <h4>Hotel, entrance | exit </h4>
+                                            {/* <h4>Hotel, entrance | exit </h4>
                                             <div className="entrada-salida">
                                                 <p>{product.hotel[0].check_in} </p>
                                                 <p>{product.hotel[0].check_out}</p>
-                                            </div>
+                                            </div> */}
                                         </div>
 
                                         <p className="stock">Stock: {product.stock}</p>

@@ -12,20 +12,6 @@ function Destinos() {
     const [continent, setContinent] = useState("");
     const [isLoading, setIsLoading] = useState(true);
 
-    const [userData, setUserData] = useState(null);
-
-    const updateUserData = () => {
-        const user = localStorage.getItem('user');
-        if (user) {
-            setUserData(JSON.parse(user));
-        }
-    };
-
-    // Llamar a la función updateUserData cuando el componente se monte
-    useEffect(() => {
-        updateUserData();
-    }, []);
-
     let token = localStorage.getItem('token')
     let headers = { headers: { 'Authorization': `Bearer ${token}` } }
 
@@ -118,4 +104,3 @@ function Destinos() {
 }
 
 export default Destinos;
-

@@ -162,8 +162,22 @@ option{
     gap: 1rem;
 }
 
-.country-continent h4{
-    font-size: 17px;
+
+
+.date{
+    background-color: var( --bg-contain-text);
+    border-radius: 20px;
+    border: none;
+    padding: 4px 10px;
+    width: 16rem;
+    margin-left: 23%;
+    margin-right: 20%;
+    color: var(--botones)!important;
+}
+
+.contain-destinos h4{
+    font-size: 20px;
+    margin-top: -20px;
     font-weight: 400;
 }
 @media (max-width: 500px){
