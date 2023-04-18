@@ -60,3 +60,21 @@
 .photo{
     width: 200%;
 }
+
+@media (max-width: 500px){
+    .contain-destin{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .packages-contain{
+        grid-template-columns: repeat(auto-fit, minmax(200px, 3vh));
+        gap: 1rem;
+    }
+    .al-lado{
+        display: flex;
+        flex-direction: column;
+
+    }
+    
+}

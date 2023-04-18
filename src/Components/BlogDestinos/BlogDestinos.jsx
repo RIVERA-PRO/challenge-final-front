@@ -7,12 +7,12 @@ export default function BlogDestinos() {
     const [destinos, setDestinos] = useState([]);
     const [searchTerm, setSearchTerm] = useState("");
     const [isLoading, setIsLoading] = useState(true);
-    
+
     let token = localStorage.getItem('token')
     let headers = { headers: { 'Authorization': `Bearer ${token}` } }
 
     useEffect(() => {
-        fetch("http://localhost:8080/destinos", headers)
+        fetch("https://odyssey-back.onrender.com/destinos", headers)
             .then((response) => response.json())
             .then((data) => {
                 console.log(data.destino)

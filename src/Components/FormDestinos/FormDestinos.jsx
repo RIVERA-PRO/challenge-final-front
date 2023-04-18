@@ -135,7 +135,7 @@ export default function FormDestinos() {
 
         }
         console.log(data)
-        let url = 'http://localhost:8080/destinos'
+        let url = 'https://odyssey-back.onrender.com/destinos'
         let token = localStorage.getItem('token')
         let headers = { 'Authorization': `Bearer ${token}` }
         try {

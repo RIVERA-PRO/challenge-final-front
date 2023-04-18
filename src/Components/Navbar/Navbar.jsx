@@ -79,7 +79,7 @@ export default function Navbar() {
     const [seller, setIsSeller] = useState(false)
 
     useEffect(() => {
-        axios.get('http://localhost:8080/seller/:id')
+        axios.get('https://odyssey-back.onrender.com/seller/:id')
             .then(response => {
                 setIsSeller(response.data)
                 console.log(setIsSeller)

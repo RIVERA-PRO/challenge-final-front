@@ -31,7 +31,7 @@ export default function FaqsForm() {
       question: formInputs.question,
     };
 
-    let url = 'http://localhost:8080/consulta/queries'
+    let url = 'https://odyssey-back.onrender.com/consulta/queries'
     try {
 
       await axios.post(url, data)
