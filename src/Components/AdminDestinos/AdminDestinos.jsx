@@ -16,7 +16,7 @@ export default function AdminDestinos() {
     let token = localStorage.getItem('token')
     let headers = { headers: { 'Authorization': `Bearer ${token}` } }
     useEffect(() => {
-        fetch("https://odyssey-back.onrender.com/destinos", headers)
+        fetch("http://localhost:8080/destinos", headers)
             .then((response) => response.json())
             .then((data) => {
                 console.log(data.destino)
@@ -49,7 +49,7 @@ export default function AdminDestinos() {
 
     const acceso = destinos.map((destino) => destino._id)
     console.log(acceso)
-    const url = `https://odyssey-back.onrender.com/destinos/${destinos_id}`
+    const url = `http://localhost:8080/destinos/${destinos_id}`
     useEffect(() => {
         fetch(url, headers)
             .then((response) => response.json())
@@ -195,7 +195,7 @@ export default function AdminDestinos() {
 
 
     const handleSaveTitle = (id) => {
-        fetch(`https://odyssey-back.onrender.com/destinos/${id}`, {
+        fetch(`http://localhost:8080/destinos/${id}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json',
@@ -240,7 +240,7 @@ export default function AdminDestinos() {
     }
 
     const handleSaveTitle2 = (id) => {
-        fetch(`https://odyssey-back.onrender.com/destinos/${id}`, {
+        fetch(`http://localhost:8080/destinos/${id}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json',
@@ -318,7 +318,7 @@ export default function AdminDestinos() {
         console.log(id)
         let token = localStorage.getItem('token')
         let headers = { headers: { 'Authorization': `Bearer ${token}` } }
-        fetch(`https://odyssey-back.onrender.com/destinos/${id}`, {
+        fetch(`http://localhost:8080/destinos/${id}`, {
             method: 'DELETE',
             headers: headers.headers,
         })

@@ -13,7 +13,7 @@ export default function Destinos6() {
     let headers = { headers: { 'Authorization': `Bearer ${token}` } }
 
     useEffect(() => {
-        fetch("https://odyssey-back.onrender.com/destinos", headers)
+        fetch("http://localhost:8080/destinos", headers)
             .then((response) => response.json())
             .then((data) => {
                 console.log(data.destino)

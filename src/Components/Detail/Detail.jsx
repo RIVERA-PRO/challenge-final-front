@@ -32,7 +32,7 @@ export default function Detail() {
     let headers = { headers: { 'Authorization': `Bearer ${token}` } }
 
     useEffect(() => {
-        fetch(`https://odyssey-back.onrender.com/destinos/${id}`, headers)
+        fetch(`http://localhost:8080/destinos/${id}`, headers)
             .then((response) => response.json())
             .then((data) => {
                 setProducto(data.destino);

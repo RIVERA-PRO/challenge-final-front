@@ -27,7 +27,7 @@ export default function FormSeller() {
             "photo": photo.current.value
         }
         console.log(data)
-        let url = 'https://odyssey-back.onrender.com/seller'
+        let url = 'http://localhost:8080/seller'
         let token = localStorage.getItem('token')
         let headers = { 'Authorization': `Bearer ${token}` }
         try {

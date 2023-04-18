@@ -79,7 +79,7 @@ export default function Navbar() {
     const [seller, setIsSeller] = useState(false)
 
     useEffect(() => {
-        axios.get('https://odyssey-back.onrender.com/seller/:id')
+        axios.get('http://localhost:8080/seller/:id')
             .then(response => {
                 setIsSeller(response.data)
                 console.log(setIsSeller)
@@ -94,11 +94,14 @@ export default function Navbar() {
 
 
             <nav className={scrolled ? "navbar scrolled " : "navbar"}>
-                <div className='logo'>
-                    <img src={Logo} alt="logo" />
-                </div>
-                <div className='logo2'>
-                    <img src={Logo2} alt="logo" />
+                <div className='logos'>
+                    <div className='logo'>
+                        <img src={Logo} alt="logo" />
+                    </div>
+                    <div className='logo2'>
+                        <img src={Logo2} alt="logo" />
+                    </div>
+                    <h1>Odyssey</h1>
                 </div>
 
                 <div className={`nav_items  ${isOpen && "open"}`} >

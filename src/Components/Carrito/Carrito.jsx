@@ -49,7 +49,7 @@ export default function Carrito() {
   const handleBuy = () => {
     // Hacer la petición HTTP al servidor para realizar la compra
     axios
-      .post("https://odyssey-back.onrender.com/buy", cartItems, headers)
+      .post("http://localhost:8080/buy", cartItems, headers)
       .then(res => window.location.href = res.data.response.body.init_point);
     localStorage.removeItem("carrito");
   };
