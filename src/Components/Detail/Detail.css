@@ -157,17 +157,22 @@
     align-items: center;
     gap: 4rem;
     font-size: 14px;
-    color: var(--text-color);
+    color: var(--bgv-color)!important;
     margin-left: 15%;
     font-weight: 500;
 }
-
+.precio-btn p{
+    color: var(--text-color)!important;
+}
 .desde-hasta{
     display: flex;
     gap: 3rem;
     color: var(--text-color);
     font-size: 11px;
     margin-top: -17px;
+}
+.desde-hasta p{
+    color: var(--text-color);
 }
 .entrada-salida{
     display: flex;

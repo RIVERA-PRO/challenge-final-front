@@ -1,44 +1,56 @@
-import React, { useState, useEffect } from 'react'
-import './Navbar.css'
-import { Link as Anchor, } from "react-router-dom";
-import Logo from '../../img/logo2.png'
-import Logo2 from '../../img/logoverde.png'
-import Register from '../Register/Register'
-import LogIn from '../LogIn/LogIn'
+import React, { useState, useEffect } from 'react';
+import './Navbar.css';
+import { Link as Anchor } from 'react-router-dom';
+import Logo from '../../img/logo2.png';
+import Logo2 from '../../img/logoverde.png';
+import Register from '../Register/Register';
+import LogIn from '../LogIn/LogIn';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser, faHeart, faShoppingCart } from '@fortawesome/free-solid-svg-icons';
-import UserInfo from '../InfoUser/InfoUser'
+import UserInfo from '../InfoUser/InfoUser';
 import axios from 'axios';
 import Carrito from '../Carrito/Carrito';
+import { useDispatch, useSelector } from 'react-redux';
+import actionUser from '../../Store/GetUser/Actions';
 
+const { oneUser } = actionUser;
 
 export default function Navbar() {
-
+    const dispatch = useDispatch();
 
     let [scrolled, setScrolled] = useState(false);
-    let [modal, setModal] = useState(false);  //Se define Modal para 'favoritos'
-    let [modalCart, setModalCart] = useState(false); //Se define Modal para 'carrito'
-    let [modalUser, setModalUser] = useState(false); //Se define Modal para 'user'
-    let [isOpen, setIsOpen] = useState(false)  //Se define Modal para 'Navbar'
+    let [modal, setModal] = useState(false);
+    let [modalCart, setModalCart] = useState(false);
+    let [modalUser, setModalUser] = useState(false);
+    let [isOpen, setIsOpen] = useState(false);
     let [modalUserOption, setModalUserOption] = useState('login');
-
-
-
     const [userData, setUserData] = useState(null);
 
     const updateUserData = () => {
-        const user = localStorage.getItem('user');
+        const user = JSON.parse(localStorage.getItem('user'));
         if (user) {
-            setUserData(JSON.parse(user));
+            setUserData(user);
         }
     };
 
-    // Llamar a la función updateUserData cuando el componente se monte
     useEffect(() => {
         updateUserData();
     }, []);
 
+    useEffect(() => {
+        const user = JSON.parse(localStorage.getItem('user'));
 
+        if (user && user.user) {
+            dispatch(oneUser({ user_id: user.user }));
+        }
+    }, [dispatch]);
+
+    const idUser = useSelector((store) => store.getUser.user[0]);
+
+
+
+    // const user2 = useSelector(state => state.getUser.user);
+    // console.log(user2)
 
     const handleModal = () => {
         setModal(!modal);
@@ -124,14 +136,22 @@ export default function Navbar() {
                     <div>
 
                         {userData ? (
-                            <div className='enlaces'>
-                                <Anchor to={`/`} >Home</Anchor>
-                                <Anchor to={`/destinos`} >Destinations</Anchor>
-                                <Anchor to={`/faqs`} >FAQ's</Anchor>
-                                <Anchor to={`/blog`} >Blog</Anchor>
-                                <Anchor to={`/new/destinos`} >Admin</Anchor>
-                            </div>
-                        ) : (
+                            idUser?.is_admin ? (
+                                <div className='enlaces'>
+                                    <Anchor to={`/`} >Home</Anchor>
+                                    <Anchor to={`/destinos`} >Destinations</Anchor>
+                                    <Anchor to={`/faqs`} >FAQ's</Anchor>
+                                    <Anchor to={`/blog`} >Blog</Anchor>
+                                    <Anchor to={`/new/destinos`} >Admin</Anchor>
+                                </div>
+                            ) : (
+                                <div className='enlaces'>
+                                    <Anchor to={`/`} >Home</Anchor>
+                                    <Anchor to={`/destinos`} >Destinations</Anchor>
+                                    <Anchor to={`/faqs`} >FAQ's</Anchor>
+                                    <Anchor to={`/blog`} >Blog</Anchor>
+                                </div>
+                            )) : (
                             <div className='enlaces'>
                                 <Anchor to={`/`} >Home</Anchor>
                                 <Anchor to={`/faqs`} >FAQ's</Anchor>

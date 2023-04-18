@@ -4,7 +4,7 @@ import { useRef, useState, useEffect } from "react";
 import axios from 'axios';
 import { useDispatch } from 'react-redux';
 import alertActions from '../../Store/Alert/actions';
-import { useNavigate } from 'react-router';
+import { useNavigate, useParams } from 'react-router';
 import Modal from 'react-modal';
 import { gapi } from "gapi-script";
 import { GoogleLogin } from "react-google-login";
@@ -45,6 +45,7 @@ export default function SignIn() {
           name: res.data.user.name,
           mail: res.data.user.mail,
           photo: res.data.user.photo,
+          user: res.data.user._id
         })
       );
       setReload(true); // Actualizar el estado para recargar el componente
