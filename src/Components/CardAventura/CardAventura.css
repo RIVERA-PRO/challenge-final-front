@@ -2,8 +2,9 @@
     text-align: center;
     background-color: var( --bg-contain-text);
     padding-top: 100px;
+        background: linear-gradient(0deg,var(--gradient1) 0%, var(--gradient1) 100%);
 }
-.card-aventura-contain h3{
+.card-aventura-contain h4{
     font-size: 30px;
 }
 .cards-contain{
@@ -16,7 +17,7 @@
     text-align: center;
     padding: 10% 10%;
     place-content: center;
-    
+    background: linear-gradient(0deg,var(--gradient2) 0%, var(--gradient1) 100%);
 }
 
 
@@ -50,5 +51,12 @@
 @media (max-width: 450px){
     .card-aventura{
         width: 85%;
+    }
+    .card-aventura h3{
+        font-size: 16px;
+    }
+    .card-aventura-contain h4{
+        font-size: 20px;
+        padding: 0px 5%;
     }
 }

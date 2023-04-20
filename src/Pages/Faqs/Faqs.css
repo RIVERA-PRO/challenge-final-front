@@ -1,9 +1,6 @@
 .FaqsPages {
     background-color: var(--bg-color);
-    /* display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center; */
+    background: linear-gradient(0deg,var(--gradient1) 0%, var(--gradient2) 100%);
 }
 
 .FaqsWelcome {
@@ -18,4 +15,10 @@
     align-items: center;
     align-content: center;
     place-content: center;
+}
+@media (max-width: 1024px){
+    .FaqsWelcome {
+        grid-template-columns: repeat(auto-fit, minmax(310px, 1vh));
+
+    }
 }

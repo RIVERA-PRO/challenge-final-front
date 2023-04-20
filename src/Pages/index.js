@@ -6,6 +6,9 @@ import PageDetail from "./PageDetail/PageDetail";
 import VerifiAcount from "./VerifiAcount/VerifiAcount";
 import Faqs from "./Faqs/Faqs";
 import BlogPage from "./BlogPage/BlogPage";
+import SellerForm from "./SellerForm/SellerForm";
+import DestinosFormPage from "./DestinosFormPage/DestinosFormPage";
+import AdminDestinos from "../Components/AdminDestinos/AdminDestinos";
 export const router = createBrowserRouter([
     {
         path: "/",
@@ -39,6 +42,18 @@ export const router = createBrowserRouter([
             {
                 path: "/Blog",
                 element: <BlogPage />,
+            },
+            {
+                path: "/sellers",
+                element: <SellerForm />,
+            },
+            {
+                path: "/new/destinos",
+                element: <DestinosFormPage />,
+            },
+            {
+                path: "/destinos/:id",
+                element: <AdminDestinos />,
             },
         ],
     },

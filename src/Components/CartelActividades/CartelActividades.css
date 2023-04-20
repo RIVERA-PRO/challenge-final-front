@@ -12,7 +12,7 @@
     align-content: center;
     place-content: center;
     height: 70vh;
-    background-color: var( --bg-contain-text);
+    background-color: var(--gradient1);
 }
 
 .cartelActividades-contain img{
@@ -47,7 +47,7 @@
     border-radius: 20px;
     color: var(  --texto-negro-blanco);
     font-size: 17px;
-    background-color: var( --bgv-color);
+    background-color: var( --botones);
     padding: 5px 30px;
     text-decoration: none;
     width: 7rem;

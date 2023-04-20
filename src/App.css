@@ -41,7 +41,7 @@
 }
 
 .darkmode-icon {
-  font-size: 2rem;
+  font-size: 2.2rem;
   margin-right: 0.5em;
   color: var( --darkIcon-color);
   cursor: pointer;
@@ -64,7 +64,7 @@
    width: 10px;
    height: 0vh;
    border-radius:100% ;
-   left: 20%;
+   left: 25%;
 }
 
 @media (max-width: 1024px){

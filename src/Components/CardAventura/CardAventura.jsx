@@ -4,7 +4,7 @@ export default function CardAventura() {
     return (
 
         <div className='card-aventura-contain'>
-            <h3>Choose the best flight for your next adventure</h3>
+            <h4>Choose the best flight for your next adventure</h4>
             <div className='cards-contain'>
 
                 <div className='card-aventura'>

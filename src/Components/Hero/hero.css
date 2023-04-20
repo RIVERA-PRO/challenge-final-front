@@ -28,14 +28,14 @@
     margin-top: 5%;
 }
 
-.heroSection button {
+.heroSection a {
     border-radius: 20px;
     color: var(  --texto-negro-blanco);
     font-size: 23px;
-    background-color: var( --bgv-color);
+    background-color: var( --botones);
     padding: 5px 30px;
     text-decoration: none;
-    width: 15rem;
+    width: 10rem;
     text-align: center;
     border: none;
 }

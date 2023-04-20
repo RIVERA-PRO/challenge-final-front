@@ -18,7 +18,7 @@ export default function Destinos6() {
             .then((data) => {
                 console.log(data.destino)
                 setDestinos(data.destino)
-                console.log(data.destino._id)
+                // console.log(data.destino._id)
                 setIsLoading(false);
             });
     }, []);
@@ -40,8 +40,8 @@ export default function Destinos6() {
                 <div className="destinos-contain-home">
                     {slicedDestinos.length > 0 ? (
                         slicedDestinos.map((destino) => (
-                            <div className="home-destinos">
-                                <div key={destino.id}>
+                            <div className="home-destinos" key={destino._id}>
+                                <div>
                                     <img src={destino.cover_photo} alt={destino.title} />
                                     <div className="card-text">
                                         <h2>{destino.title}</h2>

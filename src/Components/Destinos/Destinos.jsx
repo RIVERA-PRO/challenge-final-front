@@ -8,6 +8,8 @@ import { Link as Anchor, } from "react-router-dom";
 function Destinos() {
     const [destinos, setDestinos] = useState([]);
     const [searchTerm, setSearchTerm] = useState("");
+    const [country, setCountry] = useState("");
+    const [continent, setContinent] = useState("");
     const [isLoading, setIsLoading] = useState(true);
 
     let token = localStorage.getItem('token')
@@ -28,25 +30,62 @@ function Destinos() {
             <Spiral />
         </div>;
     } else {
-        const filteredDestinos = destinos.filter(destino => destino.title.toLowerCase().includes(searchTerm.toLowerCase()));
+        const filteredDestinos = destinos.filter(destino =>
+            destino.title.toLowerCase().includes(searchTerm.toLowerCase()) &&
+            (country === "" || destino.country === country) &&
+            (continent === "" || destino.continent === continent)
+        );
         return (
             <div className="contain-destinos">
-                <h3>Explore The destinations</h3>
+                <h3>Explore the destinations</h3>
                 <div className="inputsearch">
                     <input type="text" placeholder="Search...." value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} />
+                </div>
+                <div className="country-continent">
+                    <div className="label">
+
+                        <select value={country} onChange={(e) => setCountry(e.target.value)}>
+                            <option value="">All</option>
+                            <option value="France">France</option>
+                            <option value="Italy">Italy</option>
+                            <option value="Argentina">Argentina </option>
+                            <option value="Mexico">Mexico</option>
+                            <option value="Egipto">Egipto </option>
+                            <option value="Thailand">Thailand</option>
+                            <option value="China">China </option>
+                            <option value="Turkey">Turkey  </option>
+                            <option value="Australia">Australia</option>
+                            <option value="United States">United States</option>
+                        </select>
+                    </div>
+                    <h4>Country or Continent</h4>
+                    <div className="label">
+
+                        <select value={continent} onChange={(e) => setContinent(e.target.value)}>
+                            <option value="">All</option>
+                            <option value="Europe">Europe</option>
+                            <option value="Asia">Asia</option>
+                            <option value="Africa">Africa</option>
+                            <option value="Oceania">Oceania</option>
+                            <option value="North America">North America</option>
+                            <option value="South America">South America</option>
+                        </select>
+                    </div>
                 </div>
                 <div className="destinos-contain">
                     {filteredDestinos.length > 0 ? (
                         filteredDestinos.map((destino) => (
-                            <div className="card-destinos">
-                                <div key={destino.id}>
+                            <div className="card-destinos" key={destino._id}>
+                                <div >
                                     <img src={destino.cover_photo} alt={destino.title} />
                                     <div className="card-text">
                                         <h2>{destino.title}</h2>
 
                                         <div className='price-link'>
                                             <Anchor className='btn-detail' to={`/details/${destino._id}`}>Details</Anchor>
-                                            <p className="card-price">${destino.price}</p>
+                                            <p> {destino.packages[0].time[0].start_date}  {destino.packages[0].time[0].finish_date} </p>
+
+
                                         </div>
 
                                     </div>
@@ -55,6 +94,8 @@ function Destinos() {
                         ))
                     ) : (
                         <p className="results-no-found">No results found</p>
+
+
                     )}
                 </div>
             </div>

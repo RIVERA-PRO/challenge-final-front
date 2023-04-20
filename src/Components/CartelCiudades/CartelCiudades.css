@@ -12,7 +12,7 @@
     align-content: center;
     place-content: center;
     padding: 100px 0%;
-   
+    background: linear-gradient(0deg,var(--gradient2) 0%, var(--gradient1) 100%);
 }
 
 .cartelCiudades-contain img{
@@ -50,7 +50,7 @@
     border-radius: 20px;
     color: var(  --texto-negro-blanco);
     font-size: 17px;
-    background-color: var( --bgv-color);
+    background-color: var( --botones);
     padding: 5px 30px;
     text-decoration: none;
     width: 7rem;

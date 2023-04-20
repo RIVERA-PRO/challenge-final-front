@@ -25,7 +25,7 @@
 
 .collapsibleConteiner {
     padding: 20px;
-    background-color: var(--bg-color);
+
     height: 55vh;
     margin-bottom: 100px;
 }
@@ -40,4 +40,16 @@
 .collapsibleConteiner div {
     padding: 1rem;
     line-height: 25px;
+    
+}
+
+
+@media (max-width: 700px){
+    .Collapsible {
+      
+        font-size: 13px;
+        width: 90%;
+        cursor: pointer;
+    }
+    
 }
